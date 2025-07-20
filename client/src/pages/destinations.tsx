@@ -503,8 +503,8 @@ export default function Destinations() {
     
     // Also listen for any URL changes
     const originalPushState = history.pushState;
-    history.pushState = function() {
-      originalPushState.apply(history, arguments);
+    history.pushState = function(...args: [any, string, string | URL | null | undefined]) {
+      originalPushState.apply(history, args);
       setTimeout(handleStorageChange, 0);
     };
 
@@ -522,39 +522,28 @@ export default function Destinations() {
       <meta name="description" content="Explore top study destinations including UK, USA, Canada, Australia, New Zealand, and Europe. Find the perfect country for your international education." />
       
       <div className="pt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-16">
-            {showingUniversities ? (
-              <>
-                <div className="flex justify-center mb-6">
-                  <Button
-                    variant="ghost"
-                    onClick={() => setSelectedCountry(null)}
-                    className="text-[var(--edu-blue)] hover:text-blue-700"
-                  >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to All Destinations
-                  </Button>
-                </div>
-                <h1 className="text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] mb-6">
-                  Universities in {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].name}
-                </h1>
-                <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-                  Explore top-ranked universities and find your perfect academic match in {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].name}.
-                </p>
-              </>
-            ) : (
-              <>
-                <h1 className="text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] mb-6">
-                  Study Destinations Worldwide
-                </h1>
-                <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-                  Discover world-class education opportunities across multiple countries and find your perfect academic destination with our expert guidance.
-                </p>
-              </>
-            )}
+        {showingUniversities && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center mb-16">
+              <div className="flex justify-center mb-6">
+                <Button
+                  variant="ghost"
+                  onClick={() => setSelectedCountry(null)}
+                  className="text-[var(--edu-blue)] hover:text-blue-700"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to All Destinations
+                </Button>
+              </div>
+              <h1 className="text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] mb-6">
+                Universities in {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].name}
+              </h1>
+              <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
+                Explore top-ranked universities and find your perfect academic match in {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].name}.
+              </p>
+            </div>
           </div>
-        </div>
+        )}
         
         {showingUniversities ? (
           <section className="py-16 bg-slate-50">

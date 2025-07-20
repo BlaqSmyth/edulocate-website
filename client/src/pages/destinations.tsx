@@ -198,10 +198,18 @@ export default function Destinations() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   
   useEffect(() => {
-    const urlParams = new URLSearchParams(location.split('?')[1]);
+    const searchParams = location.includes('?') ? location.split('?')[1] : '';
+    const urlParams = new URLSearchParams(searchParams);
     const country = urlParams.get('country');
+    console.log('Current location:', location);
+    console.log('Search params:', searchParams);
+    console.log('Country from URL:', country);
+    
     if (country && universitiesByCountry[country as keyof typeof universitiesByCountry]) {
+      console.log('Setting selected country:', country);
       setSelectedCountry(country);
+    } else {
+      setSelectedCountry(null);
     }
   }, [location]);
 

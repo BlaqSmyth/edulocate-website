@@ -5,13 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import Home from "@/pages/home";
-import Services from "@/pages/services";
-import Destinations from "@/pages/destinations";
-import About from "@/pages/about";
-import Resources from "@/pages/resources";
-import Contact from "@/pages/contact";
-import NotFound from "@/pages/not-found";
+import Home from "@/pages/home.tsx";
+import Services from "@/pages/services.tsx";
+import Destinations from "@/pages/destinations.tsx";
+import About from "@/pages/about.tsx";
+import Resources from "@/pages/resources.tsx";
+import Contact from "@/pages/contact.tsx";
+import NotFound from "@/pages/not-found.tsx";
 
 function Router() {
   return (

@@ -81,6 +81,7 @@ export default function DestinationsSection() {
                     <Button
                       size="sm"
                       className="bg-white text-[var(--edu-blue)] hover:bg-gray-100"
+                      onClick={() => console.log(`Navigating to: /destinations?country=${destination.slug}`)}
                     >
                       Explore <ArrowRight className="w-4 h-4 ml-1" />
                     </Button>

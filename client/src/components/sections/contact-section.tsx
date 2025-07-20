@@ -140,7 +140,7 @@ export default function ContactSection() {
                         <FormItem>
                           <FormLabel>Phone Number</FormLabel>
                           <FormControl>
-                            <Input type="tel" placeholder="Enter your phone number" {...field} />
+                            <Input type="tel" placeholder="Enter your phone number" value={field.value || ""} onChange={field.onChange} onBlur={field.onBlur} name={field.name} ref={field.ref} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -153,7 +153,7 @@ export default function ContactSection() {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Preferred Destination</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Select destination" />
@@ -186,7 +186,11 @@ export default function ContactSection() {
                           <Textarea
                             placeholder="Tell us about your educational goals and any specific questions you have..."
                             className="min-h-[120px]"
-                            {...field}
+                            value={field.value || ""}
+                            onChange={field.onChange}
+                            onBlur={field.onBlur}
+                            name={field.name}
+                            ref={field.ref}
                           />
                         </FormControl>
                         <FormMessage />

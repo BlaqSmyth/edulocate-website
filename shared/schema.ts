@@ -6,9 +6,9 @@ export const contactInquiries = pgTable("contact_inquiries", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone"),
-  country: text("country"),
-  message: text("message"),
+  phone: text("phone").default(""),
+  country: text("country").default(""),
+  message: text("message").default(""),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

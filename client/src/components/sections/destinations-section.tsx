@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building } from "lucide-react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 
 const destinations = [
   {
@@ -48,6 +48,13 @@ const destinations = [
 ];
 
 export default function DestinationsSection() {
+  const [, navigate] = useLocation();
+
+  const handleExploreClick = (countrySlug: string) => {
+    console.log(`Navigating to: /destinations?country=${countrySlug}`);
+    navigate(`/destinations?country=${countrySlug}`);
+  };
+
   return (
     <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,15 +84,13 @@ export default function DestinationsSection() {
                     <Building className="w-4 h-4 mr-1" />
                     {destination.universities}
                   </div>
-                  <Link href={`/destinations?country=${destination.slug}`}>
-                    <Button
-                      size="sm"
-                      className="bg-white text-[var(--edu-blue)] hover:bg-gray-100"
-                      onClick={() => console.log(`Navigating to: /destinations?country=${destination.slug}`)}
-                    >
-                      Explore <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
+                  <Button
+                    size="sm"
+                    className="bg-white text-[var(--edu-blue)] hover:bg-gray-100"
+                    onClick={() => handleExploreClick(destination.slug)}
+                  >
+                    Explore <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
                 </div>
               </div>
             </div>

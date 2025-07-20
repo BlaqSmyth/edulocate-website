@@ -4,6 +4,12 @@
 
 This is a full-stack web application for EduGlobal Consultancy, an international education consulting service. The platform serves as a comprehensive resource for students seeking guidance on studying abroad, featuring information about services, destinations, resources, and a contact system for inquiries.
 
+**Recent Updates (January 2025):**
+- Added PostgreSQL database integration with Neon serverless
+- Enhanced destinations page with detailed university listings
+- Fixed explore button functionality to navigate to country-specific university information
+- Migrated from in-memory storage to persistent database storage
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -29,10 +35,12 @@ The application follows a modern full-stack architecture with clear separation b
 ## Key Components
 
 ### Database & Data Layer
+- **Database**: PostgreSQL with Neon serverless hosting
 - **ORM**: Drizzle ORM configured for PostgreSQL
 - **Schema**: Centralized in `shared/schema.ts` for type safety
-- **Storage**: Currently using in-memory storage (`MemStorage`) with interface for easy migration to database
-- **Migrations**: Drizzle migrations configured in `./migrations` directory
+- **Storage**: DatabaseStorage implementation using PostgreSQL for persistent data
+- **Connection**: Configured in `server/db.ts` with WebSocket support
+- **Tables**: Contact inquiries table with proper schema and indexing
 
 ### Contact Management System
 - Contact inquiry form with validation using Zod schemas

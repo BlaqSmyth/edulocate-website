@@ -17,7 +17,7 @@ const universitiesByCountry = {
         ranking: "#2 World University Rankings 2024",
         description: "One of the oldest and most prestigious universities in the English-speaking world.",
         courses: ["Medicine", "Law", "Engineering", "Business", "Computer Science"],
-
+        website: "https://www.ox.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -26,7 +26,7 @@ const universitiesByCountry = {
         ranking: "#3 World University Rankings 2024",
         description: "Historic university known for academic excellence and Nobel Prize winners.",
         courses: ["Mathematics", "Natural Sciences", "Economics", "Engineering", "Medicine"],
-
+        website: "https://www.cam.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -35,7 +35,7 @@ const universitiesByCountry = {
         ranking: "#6 World University Rankings 2024",
         description: "Leading science, engineering, medicine and business university.",
         courses: ["Engineering", "Medicine", "Business", "Computing", "Natural Sciences"],
-
+        website: "https://www.imperial.ac.uk",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -44,6 +44,7 @@ const universitiesByCountry = {
         ranking: "#7 World University Rankings 2024",
         description: "Premier institution for social sciences, economics, and political studies.",
         courses: ["Economics", "Politics", "Sociology", "International Relations", "Management"],
+        website: "https://www.lse.ac.uk",
         image: "https://images.unsplash.com/photo-1520637736862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -52,6 +53,7 @@ const universitiesByCountry = {
         ranking: "#8 World University Rankings 2024",
         description: "Diverse and inclusive university with strength across multiple disciplines.",
         courses: ["Medicine", "Architecture", "Psychology", "Engineering", "Law"],
+        website: "https://www.ucl.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -60,6 +62,7 @@ const universitiesByCountry = {
         ranking: "#9 World University Rankings 2024",
         description: "Historic institution with particular strength in health sciences and humanities.",
         courses: ["Medicine", "Law", "International Studies", "Dentistry", "War Studies"],
+        website: "https://www.kcl.ac.uk",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -68,6 +71,7 @@ const universitiesByCountry = {
         ranking: "#10 World University Rankings 2024",
         description: "Scotland's premier university with beautiful campus and strong research programs.",
         courses: ["Medicine", "Veterinary Science", "Engineering", "Arts", "Informatics"],
+        website: "https://www.ed.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -76,7 +80,44 @@ const universitiesByCountry = {
         ranking: "#11 World University Rankings 2024",
         description: "Large research university with comprehensive programs and vibrant student life.",
         courses: ["Engineering", "Computer Science", "Business", "Medicine", "Materials Science"],
+        website: "https://www.manchester.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Bristol",
+        location: "Bristol, England",
+        ranking: "#12 World University Rankings 2024",
+        description: "Leading research university known for innovation and engineering excellence.",
+        courses: ["Engineering", "Computer Science", "Medicine", "Law", "Economics"],
+        website: "https://www.bristol.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Warwick",
+        location: "Coventry, England",
+        ranking: "#13 World University Rankings 2024",
+        description: "Modern research university with strong business and economics programs.",
+        courses: ["Business", "Economics", "Engineering", "Computer Science", "Mathematics"],
+        website: "https://warwick.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Glasgow",
+        location: "Glasgow, Scotland",
+        ranking: "#14 World University Rankings 2024",
+        description: "Ancient Scottish university with beautiful Gothic campus and strong research tradition.",
+        courses: ["Medicine", "Engineering", "Law", "Arts", "Veterinary Medicine"],
+        website: "https://www.gla.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Durham University",
+        location: "Durham, England",
+        ranking: "#15 World University Rankings 2024",
+        description: "Collegiate university with stunning cathedral city campus and excellent teaching.",
+        courses: ["Business", "Law", "Engineering", "Natural Sciences", "Humanities"],
+        website: "https://www.dur.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },
@@ -89,7 +130,7 @@ const universitiesByCountry = {
         ranking: "#3 World University Rankings 2024",
         description: "Ivy League research university with a global reputation for excellence.",
         courses: ["Business", "Medicine", "Law", "Engineering", "Computer Science"],
-
+        website: "https://www.harvard.edu",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -98,7 +139,7 @@ const universitiesByCountry = {
         ranking: "#1 World University Rankings 2024",
         description: "World's leading university in technology, engineering, and innovation.",
         courses: ["Engineering", "Computer Science", "Physics", "Mathematics", "Business"],
-
+        website: "https://web.mit.edu",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -107,7 +148,7 @@ const universitiesByCountry = {
         ranking: "#5 World University Rankings 2024",
         description: "Leading research university known for entrepreneurship and innovation.",
         courses: ["Computer Science", "Engineering", "Business", "Medicine", "Psychology"],
-
+        website: "https://www.stanford.edu",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -116,6 +157,7 @@ const universitiesByCountry = {
         ranking: "#4 World University Rankings 2024",
         description: "Prestigious Ivy League institution known for liberal arts and research excellence.",
         courses: ["Law", "Medicine", "Drama", "Liberal Arts", "Public Health"],
+        website: "https://www.yale.edu",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -124,6 +166,7 @@ const universitiesByCountry = {
         ranking: "#6 World University Rankings 2024",
         description: "Elite Ivy League university with strong undergraduate focus and beautiful campus.",
         courses: ["Engineering", "Public Policy", "Economics", "Physics", "Computer Science"],
+        website: "https://www.princeton.edu",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -132,6 +175,7 @@ const universitiesByCountry = {
         ranking: "#12 World University Rankings 2024",
         description: "Ivy League institution with top-ranked business and medical schools.",
         courses: ["Business", "Medicine", "Engineering", "Nursing", "Veterinary Medicine"],
+        website: "https://www.upenn.edu",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -140,6 +184,7 @@ const universitiesByCountry = {
         ranking: "#13 World University Rankings 2024",
         description: "Prestigious Ivy League university in the heart of Manhattan.",
         courses: ["Journalism", "Medicine", "Business", "Engineering", "International Affairs"],
+        website: "https://www.columbia.edu",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -148,7 +193,44 @@ const universitiesByCountry = {
         ranking: "#14 World University Rankings 2024",
         description: "Renowned for rigorous academics and influential research contributions.",
         courses: ["Economics", "Business", "Medicine", "Law", "Social Sciences"],
+        website: "https://www.uchicago.edu",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of California, Berkeley",
+        location: "Berkeley, California",
+        ranking: "#15 World University Rankings 2024",
+        description: "Top public university known for academic excellence and social activism.",
+        courses: ["Engineering", "Computer Science", "Business", "Law", "Public Policy"],
+        website: "https://www.berkeley.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Cornell University",
+        location: "Ithaca, New York",
+        ranking: "#16 World University Rankings 2024",
+        description: "Ivy League institution with strong programs in agriculture, engineering, and veterinary medicine.",
+        courses: ["Engineering", "Agriculture", "Veterinary Medicine", "Business", "Hotel Administration"],
+        website: "https://www.cornell.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Johns Hopkins University",
+        location: "Baltimore, Maryland",
+        ranking: "#17 World University Rankings 2024",
+        description: "Leading research university with world-renowned medical and public health programs.",
+        courses: ["Medicine", "Public Health", "Engineering", "International Studies", "Biomedical Sciences"],
+        website: "https://www.jhu.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Northwestern University",
+        location: "Evanston, Illinois",
+        ranking: "#18 World University Rankings 2024",
+        description: "Elite private university with strong programs in journalism, business, and medicine.",
+        courses: ["Journalism", "Business", "Medicine", "Engineering", "Communications"],
+        website: "https://www.northwestern.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },
@@ -161,7 +243,7 @@ const universitiesByCountry = {
         ranking: "#18 World University Rankings 2024",
         description: "Canada's leading research university with global recognition.",
         courses: ["Medicine", "Engineering", "Business", "Computer Science", "Law"],
-
+        website: "https://www.utoronto.ca",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -170,7 +252,7 @@ const universitiesByCountry = {
         ranking: "#30 World University Rankings 2024",
         description: "Internationally renowned university with a diverse student body.",
         courses: ["Medicine", "Engineering", "Business", "Arts", "Science"],
-
+        website: "https://www.mcgill.ca",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -179,7 +261,7 @@ const universitiesByCountry = {
         ranking: "#40 World University Rankings 2024",
         description: "Public research university known for innovation and sustainability.",
         courses: ["Engineering", "Business", "Medicine", "Computer Science", "Arts"],
-
+        website: "https://www.ubc.ca",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -188,6 +270,7 @@ const universitiesByCountry = {
         ranking: "#125 World University Rankings 2024",
         description: "Major research university with strength in energy and health sciences.",
         courses: ["Engineering", "Medicine", "Business", "Agriculture", "Petroleum Engineering"],
+        website: "https://www.ualberta.ca",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -196,6 +279,7 @@ const universitiesByCountry = {
         ranking: "#152 World University Rankings 2024",
         description: "Innovative university known for problem-based learning and research.",
         courses: ["Medicine", "Engineering", "Business", "Health Sciences", "Nuclear Engineering"],
+        website: "https://www.mcmaster.ca",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -204,6 +288,7 @@ const universitiesByCountry = {
         ranking: "#112 World University Rankings 2024",
         description: "Leading technology university with strong co-operative education programs.",
         courses: ["Computer Science", "Engineering", "Mathematics", "Business", "Applied Health Sciences"],
+        website: "https://uwaterloo.ca",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
@@ -217,7 +302,7 @@ const universitiesByCountry = {
         ranking: "#14 World University Rankings 2024",
         description: "Australia's leading university with a strong research focus.",
         courses: ["Medicine", "Engineering", "Business", "Law", "Arts"],
-
+        website: "https://www.unimelb.edu.au",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -226,7 +311,7 @@ const universitiesByCountry = {
         ranking: "#34 World University Rankings 2024",
         description: "National research university with strong government connections.",
         courses: ["Politics", "Economics", "Engineering", "Computer Science", "Medicine"],
-
+        website: "https://www.anu.edu.au",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -235,7 +320,7 @@ const universitiesByCountry = {
         ranking: "#41 World University Rankings 2024",
         description: "Historic university known for academic excellence and beautiful campus.",
         courses: ["Medicine", "Business", "Engineering", "Law", "Arts"],
-
+        website: "https://www.sydney.edu.au",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -244,6 +329,7 @@ const universitiesByCountry = {
         ranking: "#19 World University Rankings 2024",
         description: "Dynamic university known for innovation and industry connections.",
         courses: ["Engineering", "Business", "Medicine", "Art & Design", "Computer Science"],
+        website: "https://www.unsw.edu.au",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -252,6 +338,7 @@ const universitiesByCountry = {
         ranking: "#42 World University Rankings 2024",
         description: "Large research university with campuses across Australia and internationally.",
         courses: ["Medicine", "Engineering", "Business", "Pharmacy", "Education"],
+        website: "https://www.monash.edu",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -260,6 +347,7 @@ const universitiesByCountry = {
         ranking: "#40 World University Rankings 2024",
         description: "Leading research university with beautiful St Lucia campus.",
         courses: ["Medicine", "Engineering", "Business", "Agriculture", "Veterinary Science"],
+        website: "https://www.uq.edu.au",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
@@ -273,7 +361,7 @@ const universitiesByCountry = {
         ranking: "#68 World University Rankings 2024",
         description: "New Zealand's largest and highest-ranked university.",
         courses: ["Engineering", "Medicine", "Business", "Arts", "Science"],
-
+        website: "https://www.auckland.ac.nz",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -282,7 +370,7 @@ const universitiesByCountry = {
         ranking: "#201-250 World University Rankings 2024",
         description: "Oldest university in New Zealand with strong medical programs.",
         courses: ["Medicine", "Dentistry", "Pharmacy", "Arts", "Science"],
-
+        website: "https://www.otago.ac.nz",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -291,6 +379,7 @@ const universitiesByCountry = {
         ranking: "#236 World University Rankings 2024",
         description: "Capital city university with strong programs in law and public policy.",
         courses: ["Law", "Public Policy", "Creative Arts", "Sciences", "International Relations"],
+        website: "https://www.wgtn.ac.nz",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -299,6 +388,7 @@ const universitiesByCountry = {
         ranking: "#256 World University Rankings 2024",
         description: "Leading engineering and science university rebuilding after earthquakes.",
         courses: ["Engineering", "Sciences", "Forestry", "Fine Arts", "Computer Science"],
+        website: "https://www.canterbury.ac.nz",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -307,6 +397,7 @@ const universitiesByCountry = {
         ranking: "#292 World University Rankings 2024",
         description: "Multi-campus university with strength in agriculture and veterinary science.",
         courses: ["Agriculture", "Veterinary Science", "Aviation", "Creative Arts", "Business"],
+        website: "https://www.massey.ac.nz",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
@@ -320,7 +411,7 @@ const universitiesByCountry = {
         ranking: "#11 World University Rankings 2024",
         description: "Leading European university for science, technology, engineering and mathematics.",
         courses: ["Engineering", "Computer Science", "Physics", "Mathematics", "Architecture"],
-
+        website: "https://ethz.ch",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -329,7 +420,7 @@ const universitiesByCountry = {
         ranking: "#37 World University Rankings 2024",
         description: "Germany's top technical university with strong industry connections.",
         courses: ["Engineering", "Computer Science", "Medicine", "Management", "Natural Sciences"],
-
+        website: "https://www.tum.de",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -338,7 +429,7 @@ const universitiesByCountry = {
         ranking: "#53 World University Rankings 2024",
         description: "Leading Dutch university with strong international programs.",
         courses: ["Business", "Economics", "Psychology", "Computer Science", "Arts"],
-
+        website: "https://www.uva.nl",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -347,6 +438,7 @@ const universitiesByCountry = {
         ranking: "#46 World University Rankings 2024",
         description: "Historic Parisian university formed by merger of Paris-Sorbonne and UPMC.",
         courses: ["Medicine", "Sciences", "Literature", "Engineering", "Arts"],
+        website: "https://www.sorbonne-universite.fr",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -355,6 +447,7 @@ const universitiesByCountry = {
         ranking: "#47 World University Rankings 2024",
         description: "Premier Dutch technical university with cutting-edge research facilities.",
         courses: ["Engineering", "Architecture", "Applied Sciences", "Technology", "Aerospace"],
+        website: "https://www.tudelft.nl",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
@@ -363,6 +456,7 @@ const universitiesByCountry = {
         ranking: "#48 World University Rankings 2024",
         description: "Belgium's largest and oldest university with excellent research.",
         courses: ["Medicine", "Engineering", "Business", "Humanities", "Social Sciences"],
+        website: "https://www.kuleuven.be",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
@@ -472,7 +566,10 @@ export default function Destinations() {
                       </div>
                       
                       <div className="flex justify-end">
-                        <Button className="bg-[var(--edu-blue)] text-white hover:bg-blue-700">
+                        <Button 
+                          className="bg-[var(--edu-blue)] text-white hover:bg-blue-700"
+                          onClick={() => window.open(university.website, '_blank')}
+                        >
                           <GraduationCap className="w-4 h-4 mr-2" />
                           Learn More
                           <ExternalLink className="w-4 h-4 ml-2" />

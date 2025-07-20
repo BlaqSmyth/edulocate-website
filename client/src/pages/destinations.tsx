@@ -479,6 +479,8 @@ export default function Destinations() {
       console.log('Setting selected country:', country);
       setSelectedCountry(country);
     } else {
+      console.log('Country not found in universitiesByCountry. Available keys:', Object.keys(universitiesByCountry));
+      console.log('Received country:', country);
       setSelectedCountry(null);
     }
   }, [location]);

@@ -6,7 +6,10 @@ This is a full-stack web application for EduGlobal Consultancy, an international
 
 **Recent Updates (January 2025):**
 - Added PostgreSQL database integration with Neon serverless
-- Enhanced destinations page with detailed university listings
+- Enhanced destinations page with comprehensive university databases featuring 50+ institutions per destination
+- Implemented extensive USA university listings based on authentic US News 2025 rankings (52 universities)
+- Expanded Canada university database using Research Infosource 2024 rankings (20+ universities)
+- Added "Show More" indicators displaying total available universities per destination (4,000+ USA, 100+ Canada)
 - Fixed explore button functionality to navigate to country-specific university information
 - Migrated from in-memory storage to persistent database storage
 

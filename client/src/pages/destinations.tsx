@@ -10,56 +10,93 @@ import { GraduationCap, MapPin, Star, ExternalLink, ArrowLeft } from "lucide-rea
 const universitiesByCountry = {
   uk: {
     name: "United Kingdom",
+    totalUniversities: "200+",
     universities: [
+      {
+        name: "University of Cambridge",
+        location: "Cambridge, England",
+        ranking: "#1 Complete University Guide 2025",
+        description: "World's oldest English-speaking university with outstanding research and teaching excellence.",
+        courses: ["Mathematics", "Natural Sciences", "Economics", "Engineering", "Medicine"],
+        website: "https://www.cam.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
       {
         name: "University of Oxford",
         location: "Oxford, England",
-        ranking: "#2 World University Rankings 2024",
+        ranking: "#2 Complete University Guide 2025",
         description: "One of the oldest and most prestigious universities in the English-speaking world.",
         courses: ["Medicine", "Law", "Engineering", "Business", "Computer Science"],
         website: "https://www.ox.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Cambridge",
-        location: "Cambridge, England",
-        ranking: "#3 World University Rankings 2024",
-        description: "Historic university known for academic excellence and Nobel Prize winners.",
-        courses: ["Mathematics", "Natural Sciences", "Economics", "Engineering", "Medicine"],
-        website: "https://www.cam.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Imperial College London",
-        location: "London, England",
-        ranking: "#6 World University Rankings 2024",
-        description: "Leading science, engineering, medicine and business university.",
-        courses: ["Engineering", "Medicine", "Business", "Computing", "Natural Sciences"],
-        website: "https://www.imperial.ac.uk",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
         name: "London School of Economics",
         location: "London, England",
-        ranking: "#7 World University Rankings 2024",
-        description: "Premier institution for social sciences, economics, and political studies.",
+        ranking: "#3 Complete University Guide 2025",
+        description: "World-leading social science institution with exceptional research quality.",
         courses: ["Economics", "Politics", "Sociology", "International Relations", "Management"],
         website: "https://www.lse.ac.uk",
         image: "https://images.unsplash.com/photo-1520637736862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
+        name: "University of St Andrews",
+        location: "St Andrews, Scotland",
+        ranking: "#4 Complete University Guide 2025",
+        description: "Ancient Scottish university with excellent student satisfaction and teaching quality.",
+        courses: ["International Relations", "Philosophy", "Psychology", "Computer Science", "Medicine"],
+        website: "https://www.st-andrews.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Imperial College London",
+        location: "London, England",
+        ranking: "#5 Complete University Guide 2025",
+        description: "Leading science, engineering, medicine and business university with exceptional graduate prospects.",
+        courses: ["Engineering", "Medicine", "Business", "Computing", "Natural Sciences"],
+        website: "https://www.imperial.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Warwick",
+        location: "Coventry, England",
+        ranking: "#6 Complete University Guide 2025",
+        description: "Dynamic research university with world-class business and economics programs.",
+        courses: ["Business", "Economics", "Engineering", "Computer Science", "Mathematics"],
+        website: "https://warwick.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
         name: "University College London",
         location: "London, England",
-        ranking: "#8 World University Rankings 2024",
+        ranking: "#7 Complete University Guide 2025",
         description: "Diverse and inclusive university with strength across multiple disciplines.",
         courses: ["Medicine", "Architecture", "Psychology", "Engineering", "Law"],
         website: "https://www.ucl.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
+        name: "University of Bath",
+        location: "Bath, England",
+        ranking: "#8 Complete University Guide 2025",
+        description: "Modern campus university with outstanding graduate employment rates.",
+        courses: ["Engineering", "Management", "Architecture", "Psychology", "Computer Science"],
+        website: "https://www.bath.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Durham University",
+        location: "Durham, England",
+        ranking: "#9 Complete University Guide 2025",
+        description: "Collegiate university with stunning cathedral city campus and excellent teaching.",
+        courses: ["Business", "Law", "Engineering", "Natural Sciences", "Humanities"],
+        website: "https://www.dur.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
         name: "King's College London",
         location: "London, England",
-        ranking: "#9 World University Rankings 2024",
+        ranking: "#10 Complete University Guide 2025",
         description: "Historic institution with particular strength in health sciences and humanities.",
         courses: ["Medicine", "Law", "International Studies", "Dentistry", "War Studies"],
         website: "https://www.kcl.ac.uk",
@@ -68,174 +105,653 @@ const universitiesByCountry = {
       {
         name: "University of Edinburgh",
         location: "Edinburgh, Scotland",
-        ranking: "#10 World University Rankings 2024",
+        ranking: "#11 Complete University Guide 2025",
         description: "Scotland's premier university with beautiful campus and strong research programs.",
         courses: ["Medicine", "Veterinary Science", "Engineering", "Arts", "Informatics"],
         website: "https://www.ed.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Manchester",
-        location: "Manchester, England",
-        ranking: "#11 World University Rankings 2024",
-        description: "Large research university with comprehensive programs and vibrant student life.",
-        courses: ["Engineering", "Computer Science", "Business", "Medicine", "Materials Science"],
-        website: "https://www.manchester.ac.uk",
+        name: "University of Birmingham",
+        location: "Birmingham, England",
+        ranking: "#12 Complete University Guide 2025",
+        description: "Leading research university and founding member of the Russell Group.",
+        courses: ["Medicine", "Engineering", "Business", "Psychology", "Law"],
+        website: "https://www.birmingham.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Lancaster University",
+        location: "Lancaster, England",
+        ranking: "#13 Complete University Guide 2025",
+        description: "Campus university with outstanding research and excellent student experience.",
+        courses: ["Management", "Psychology", "Engineering", "Computer Science", "Environmental Science"],
+        website: "https://www.lancaster.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Exeter",
+        location: "Exeter, England",
+        ranking: "#14 Complete University Guide 2025",
+        description: "Beautiful campus university with excellent teaching and research reputation.",
+        courses: ["Medicine", "Business", "Psychology", "Engineering", "Environmental Science"],
+        website: "https://www.exeter.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "University of Bristol",
         location: "Bristol, England",
-        ranking: "#12 World University Rankings 2024",
+        ranking: "#16 Complete University Guide 2025",
         description: "Leading research university known for innovation and engineering excellence.",
         courses: ["Engineering", "Computer Science", "Medicine", "Law", "Economics"],
         website: "https://www.bristol.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Warwick",
-        location: "Coventry, England",
-        ranking: "#13 World University Rankings 2024",
-        description: "Modern research university with strong business and economics programs.",
-        courses: ["Business", "Economics", "Engineering", "Computer Science", "Mathematics"],
-        website: "https://warwick.ac.uk",
+        name: "University of York",
+        location: "York, England",
+        ranking: "#17 Complete University Guide 2025",
+        description: "Modern research university with beautiful campus and strong academic reputation.",
+        courses: ["Psychology", "Computer Science", "Economics", "Medicine", "Law"],
+        website: "https://www.york.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Sheffield",
+        location: "Sheffield, England",
+        ranking: "#18 Complete University Guide 2025",
+        description: "Russell Group university with outstanding engineering and medical programs.",
+        courses: ["Engineering", "Medicine", "Architecture", "Computer Science", "Psychology"],
+        website: "https://www.sheffield.ac.uk",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Liverpool",
+        location: "Liverpool, England",
+        ranking: "#19 Complete University Guide 2025",
+        description: "Historic Russell Group university with strong research and teaching traditions.",
+        courses: ["Medicine", "Veterinary Science", "Engineering", "Business", "Computer Science"],
+        website: "https://www.liverpool.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Southampton",
+        location: "Southampton, England",
+        ranking: "#20 Complete University Guide 2025",
+        description: "Leading research university with particular strength in engineering and computer science.",
+        courses: ["Engineering", "Computer Science", "Medicine", "Business", "Maritime Studies"],
+        website: "https://www.southampton.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "University of Glasgow",
         location: "Glasgow, Scotland",
-        ranking: "#14 World University Rankings 2024",
+        ranking: "#21 Complete University Guide 2025",
         description: "Ancient Scottish university with beautiful Gothic campus and strong research tradition.",
         courses: ["Medicine", "Engineering", "Law", "Arts", "Veterinary Medicine"],
         website: "https://www.gla.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "Durham University",
-        location: "Durham, England",
-        ranking: "#15 World University Rankings 2024",
-        description: "Collegiate university with stunning cathedral city campus and excellent teaching.",
-        courses: ["Business", "Law", "Engineering", "Natural Sciences", "Humanities"],
-        website: "https://www.dur.ac.uk",
+        name: "University of Nottingham",
+        location: "Nottingham, England",
+        ranking: "#22 Complete University Guide 2025",
+        description: "Research-intensive university with beautiful campus and global campuses.",
+        courses: ["Medicine", "Veterinary Science", "Engineering", "Business", "Pharmacy"],
+        website: "https://www.nottingham.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Queen Mary University of London",
+        location: "London, England",
+        ranking: "#23 Complete University Guide 2025",
+        description: "Russell Group university with strong research reputation and diverse student body.",
+        courses: ["Medicine", "Dentistry", "Law", "Engineering", "Computer Science"],
+        website: "https://www.qmul.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Manchester",
+        location: "Manchester, England",
+        ranking: "#24 Complete University Guide 2025",
+        description: "Large research university with comprehensive programs and vibrant student life.",
+        courses: ["Engineering", "Computer Science", "Business", "Medicine", "Materials Science"],
+        website: "https://www.manchester.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Leicester",
+        location: "Leicester, England",
+        ranking: "#25 Complete University Guide 2025",
+        description: "Compact campus university with strong research reputation and supportive environment.",
+        courses: ["Medicine", "Psychology", "Engineering", "Law", "Criminology"],
+        website: "https://www.leicester.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Leeds",
+        location: "Leeds, England",
+        ranking: "#26 Complete University Guide 2025",
+        description: "Russell Group university offering wide range of subjects with excellent facilities.",
+        courses: ["Medicine", "Engineering", "Business", "Psychology", "Textiles"],
+        website: "https://www.leeds.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Newcastle University",
+        location: "Newcastle, England",
+        ranking: "#27 Complete University Guide 2025",
+        description: "Russell Group university with outstanding research and vibrant city campus.",
+        courses: ["Medicine", "Engineering", "Architecture", "Psychology", "Marine Sciences"],
+        website: "https://www.ncl.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Cardiff University",
+        location: "Cardiff, Wales",
+        ranking: "#28 Complete University Guide 2025",
+        description: "Leading Welsh university with excellent research reputation and student satisfaction.",
+        courses: ["Medicine", "Journalism", "Engineering", "Psychology", "Architecture"],
+        website: "https://www.cardiff.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Queen's University Belfast",
+        location: "Belfast, Northern Ireland",
+        ranking: "#29 Complete University Guide 2025",
+        description: "Russell Group university with strong research tradition and beautiful campus.",
+        courses: ["Medicine", "Engineering", "Law", "Psychology", "Pharmacy"],
+        website: "https://www.qub.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Sussex",
+        location: "Brighton, England",
+        ranking: "#30 Complete University Guide 2025",
+        description: "Innovative university with strong research reputation and beautiful campus near Brighton.",
+        courses: ["Psychology", "International Relations", "Computer Science", "Medicine", "Business"],
+        website: "https://www.sussex.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },
   usa: {
     name: "United States",
+    totalUniversities: "4,000+",
     universities: [
       {
-        name: "Harvard University",
-        location: "Cambridge, Massachusetts",
-        ranking: "#3 World University Rankings 2024",
-        description: "Ivy League research university with a global reputation for excellence.",
-        courses: ["Business", "Medicine", "Law", "Engineering", "Computer Science"],
-        website: "https://www.harvard.edu",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "MIT",
-        location: "Cambridge, Massachusetts",
-        ranking: "#1 World University Rankings 2024",
-        description: "World's leading university in technology, engineering, and innovation.",
-        courses: ["Engineering", "Computer Science", "Physics", "Mathematics", "Business"],
-        website: "https://web.mit.edu",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Stanford University",
-        location: "Stanford, California",
-        ranking: "#5 World University Rankings 2024",
-        description: "Leading research university known for entrepreneurship and innovation.",
-        courses: ["Computer Science", "Engineering", "Business", "Medicine", "Psychology"],
-        website: "https://www.stanford.edu",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Yale University",
-        location: "New Haven, Connecticut",
-        ranking: "#4 World University Rankings 2024",
-        description: "Prestigious Ivy League institution known for liberal arts and research excellence.",
-        courses: ["Law", "Medicine", "Drama", "Liberal Arts", "Public Health"],
-        website: "https://www.yale.edu",
-        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
         name: "Princeton University",
-        location: "Princeton, New Jersey",
-        ranking: "#6 World University Rankings 2024",
-        description: "Elite Ivy League university with strong undergraduate focus and beautiful campus.",
+        location: "Princeton, NJ",
+        ranking: "#1 US News 2025",
+        description: "Elite Ivy League university with outstanding undergraduate education and research excellence.",
         courses: ["Engineering", "Public Policy", "Economics", "Physics", "Computer Science"],
         website: "https://www.princeton.edu",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Pennsylvania",
-        location: "Philadelphia, Pennsylvania",
-        ranking: "#12 World University Rankings 2024",
-        description: "Ivy League institution with top-ranked business and medical schools.",
-        courses: ["Business", "Medicine", "Engineering", "Nursing", "Veterinary Medicine"],
-        website: "https://www.upenn.edu",
+        name: "Massachusetts Institute of Technology",
+        location: "Cambridge, MA",
+        ranking: "#2 US News 2025",
+        description: "World's leading technology and engineering research university.",
+        courses: ["Engineering", "Computer Science", "Physics", "Mathematics", "Business"],
+        website: "https://www.mit.edu",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
+        name: "Harvard University",
+        location: "Cambridge, MA",
+        ranking: "#3 US News 2025",
+        description: "America's oldest higher education institution with unparalleled academic excellence.",
+        courses: ["Medicine", "Business", "Law", "Engineering", "Liberal Arts"],
+        website: "https://www.harvard.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Stanford University",
+        location: "Stanford, CA",
+        ranking: "#3 US News 2025",
+        description: "Leading research university in Silicon Valley known for innovation and entrepreneurship.",
+        courses: ["Computer Science", "Engineering", "Business", "Medicine", "Social Sciences"],
+        website: "https://www.stanford.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Yale University",
+        location: "New Haven, CT",
+        ranking: "#5 US News 2025",
+        description: "Historic Ivy League institution with strong liberal arts tradition and research excellence.",
+        courses: ["Liberal Arts", "Medicine", "Law", "Business", "Drama"],
+        website: "https://www.yale.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Pennsylvania",
+        location: "Philadelphia, PA",
+        ranking: "#6 US News 2025",
+        description: "Ivy League university with the prestigious Wharton School of Business.",
+        courses: ["Business", "Engineering", "Medicine", "Nursing", "Social Sciences"],
+        website: "https://www.upenn.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "California Institute of Technology",
+        location: "Pasadena, CA",
+        ranking: "#7 US News 2025",
+        description: "Elite science and engineering institute known for cutting-edge research and innovation.",
+        courses: ["Engineering", "Physics", "Chemistry", "Biology", "Computer Science"],
+        website: "https://www.caltech.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Duke University",
+        location: "Durham, NC",
+        ranking: "#7 US News 2025",
+        description: "Premier research university with strong programs in medicine, business, and engineering.",
+        courses: ["Medicine", "Business", "Engineering", "Public Policy", "Law"],
+        website: "https://www.duke.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Brown University",
+        location: "Providence, RI",
+        ranking: "#9 US News 2025",
+        description: "Ivy League university known for academic freedom and innovative curriculum.",
+        courses: ["Liberal Arts", "Medicine", "Engineering", "International Relations", "Computer Science"],
+        website: "https://www.brown.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Johns Hopkins University",
+        location: "Baltimore, MD",
+        ranking: "#9 US News 2025",
+        description: "Leading research university renowned for medicine, public health, and international studies.",
+        courses: ["Medicine", "Public Health", "Engineering", "International Studies", "Nursing"],
+        website: "https://www.jhu.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Northwestern University",
+        location: "Evanston, IL",
+        ranking: "#9 US News 2025",
+        description: "Elite private university with outstanding journalism, business, and medical programs.",
+        courses: ["Journalism", "Business", "Medicine", "Engineering", "Communications"],
+        website: "https://www.northwestern.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
         name: "Columbia University",
-        location: "New York, New York",
-        ranking: "#13 World University Rankings 2024",
-        description: "Prestigious Ivy League university in the heart of Manhattan.",
-        courses: ["Journalism", "Medicine", "Business", "Engineering", "International Affairs"],
+        location: "New York, NY",
+        ranking: "#12 US News 2025",
+        description: "Ivy League university in Manhattan with strong journalism and business programs.",
+        courses: ["Journalism", "Business", "Medicine", "Law", "Engineering"],
         website: "https://www.columbia.edu",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
+        name: "Cornell University",
+        location: "Ithaca, NY",
+        ranking: "#12 US News 2025",
+        description: "Ivy League institution with diverse programs including agriculture, engineering, and business.",
+        courses: ["Engineering", "Agriculture", "Veterinary Medicine", "Business", "Hotel Administration"],
+        website: "https://www.cornell.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
         name: "University of Chicago",
-        location: "Chicago, Illinois",
-        ranking: "#14 World University Rankings 2024",
-        description: "Renowned for rigorous academics and influential research contributions.",
+        location: "Chicago, IL",
+        ranking: "#12 US News 2025",
+        description: "Research powerhouse known for economics, social sciences, and rigorous academics.",
         courses: ["Economics", "Business", "Medicine", "Law", "Social Sciences"],
         website: "https://www.uchicago.edu",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "University of California, Berkeley",
-        location: "Berkeley, California",
-        ranking: "#15 World University Rankings 2024",
-        description: "Top public university known for academic excellence and social activism.",
-        courses: ["Engineering", "Computer Science", "Business", "Law", "Public Policy"],
+        location: "Berkeley, CA",
+        ranking: "#15 US News 2025",
+        description: "Top public university known for academic excellence and research innovation.",
+        courses: ["Engineering", "Computer Science", "Business", "Public Policy", "Natural Sciences"],
         website: "https://www.berkeley.edu",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "Cornell University",
-        location: "Ithaca, New York",
-        ranking: "#16 World University Rankings 2024",
-        description: "Ivy League institution with strong programs in agriculture, engineering, and veterinary medicine.",
-        courses: ["Engineering", "Agriculture", "Veterinary Medicine", "Business", "Hotel Administration"],
-        website: "https://www.cornell.edu",
+        name: "University of California, Los Angeles",
+        location: "Los Angeles, CA",
+        ranking: "#15 US News 2025",
+        description: "Premier public research university with outstanding programs across all disciplines.",
+        courses: ["Film", "Medicine", "Engineering", "Business", "Psychology"],
+        website: "https://www.ucla.edu",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "Johns Hopkins University",
-        location: "Baltimore, Maryland",
-        ranking: "#17 World University Rankings 2024",
-        description: "Leading research university with world-renowned medical and public health programs.",
-        courses: ["Medicine", "Public Health", "Engineering", "International Studies", "Biomedical Sciences"],
-        website: "https://www.jhu.edu",
+        name: "Rice University",
+        location: "Houston, TX",
+        ranking: "#17 US News 2025",
+        description: "Small private research university known for engineering, business, and liberal arts.",
+        courses: ["Engineering", "Business", "Architecture", "Music", "Natural Sciences"],
+        website: "https://www.rice.edu",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "Northwestern University",
-        location: "Evanston, Illinois",
-        ranking: "#18 World University Rankings 2024",
-        description: "Elite private university with strong programs in journalism, business, and medicine.",
-        courses: ["Journalism", "Business", "Medicine", "Engineering", "Communications"],
-        website: "https://www.northwestern.edu",
+        name: "Dartmouth College",
+        location: "Hanover, NH",
+        ranking: "#18 US News 2025",
+        description: "Ivy League college with strong alumni network and outdoor recreation culture.",
+        courses: ["Liberal Arts", "Business", "Engineering", "Medicine", "Environmental Studies"],
+        website: "https://www.dartmouth.edu",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Vanderbilt University",
+        location: "Nashville, TN",
+        ranking: "#18 US News 2025",
+        description: "Private research university with strong programs in education, medicine, and music.",
+        courses: ["Education", "Medicine", "Engineering", "Business", "Music"],
+        website: "https://www.vanderbilt.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Notre Dame",
+        location: "Notre Dame, IN",
+        ranking: "#20 US News 2025",
+        description: "Catholic research university with strong undergraduate education and business programs.",
+        courses: ["Business", "Engineering", "Liberal Arts", "Architecture", "Science"],
+        website: "https://www.nd.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Michigan",
+        location: "Ann Arbor, MI",
+        ranking: "#21 US News 2025",
+        description: "Top public research university with excellent programs across all fields.",
+        courses: ["Engineering", "Business", "Medicine", "Law", "Public Policy"],
+        website: "https://www.umich.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Georgetown University",
+        location: "Washington, DC",
+        ranking: "#22 US News 2025",
+        description: "Prestigious Catholic university known for international affairs and law programs.",
+        courses: ["International Affairs", "Law", "Business", "Medicine", "Public Policy"],
+        website: "https://www.georgetown.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of North Carolina at Chapel Hill",
+        location: "Chapel Hill, NC",
+        ranking: "#22 US News 2025",
+        description: "Public research university with strong liberal arts and professional programs.",
+        courses: ["Journalism", "Business", "Medicine", "Public Health", "Liberal Arts"],
+        website: "https://www.unc.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Carnegie Mellon University",
+        location: "Pittsburgh, PA",
+        ranking: "#24 US News 2025",
+        description: "Research university known for computer science, engineering, and robotics programs.",
+        courses: ["Computer Science", "Engineering", "Robotics", "Business", "Fine Arts"],
+        website: "https://www.cmu.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Emory University",
+        location: "Atlanta, GA",
+        ranking: "#24 US News 2025",
+        description: "Private research university with outstanding medical and business programs.",
+        courses: ["Medicine", "Business", "Nursing", "Public Health", "Liberal Arts"],
+        website: "https://www.emory.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Virginia",
+        location: "Charlottesville, VA",
+        ranking: "#24 US News 2025",
+        description: "Public university founded by Thomas Jefferson with honor code tradition.",
+        courses: ["Business", "Law", "Medicine", "Engineering", "Liberal Arts"],
+        website: "https://www.virginia.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Washington University in St. Louis",
+        location: "St. Louis, MO",
+        ranking: "#24 US News 2025",
+        description: "Private research university with strong programs in medicine and engineering.",
+        courses: ["Medicine", "Engineering", "Business", "Arts & Sciences", "Social Work"],
+        website: "https://www.wustl.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of California, Davis",
+        location: "Davis, CA",
+        ranking: "#28 US News 2025",
+        description: "Public research university known for agriculture, veterinary medicine, and environmental science.",
+        courses: ["Agriculture", "Veterinary Medicine", "Engineering", "Medicine", "Environmental Science"],
+        website: "https://www.ucdavis.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of California, San Diego",
+        location: "San Diego, CA",
+        ranking: "#28 US News 2025",
+        description: "Public research university known for science, engineering, and ocean studies.",
+        courses: ["Engineering", "Medicine", "Computer Science", "Marine Science", "Biology"],
+        website: "https://www.ucsd.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Florida",
+        location: "Gainesville, FL",
+        ranking: "#28 US News 2025",
+        description: "Large public research university with strong programs across multiple disciplines.",
+        courses: ["Business", "Engineering", "Medicine", "Journalism", "Agriculture"],
+        website: "https://www.ufl.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Southern California",
+        location: "Los Angeles, CA",
+        ranking: "#28 US News 2025",
+        description: "Private research university known for cinema, business, and engineering programs.",
+        courses: ["Cinema", "Business", "Engineering", "Medicine", "Communications"],
+        website: "https://www.usc.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Texas at Austin",
+        location: "Austin, TX",
+        ranking: "#32 US News 2025",
+        description: "Major public research university with strong programs in business and engineering.",
+        courses: ["Business", "Engineering", "Computer Science", "Communications", "Liberal Arts"],
+        website: "https://www.utexas.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Georgia Institute of Technology",
+        location: "Atlanta, GA",
+        ranking: "#33 US News 2025",
+        description: "Public research university renowned for engineering, computing, and business programs.",
+        courses: ["Engineering", "Computer Science", "Business", "Architecture", "Sciences"],
+        website: "https://www.gatech.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of California, Irvine",
+        location: "Irvine, CA",
+        ranking: "#33 US News 2025",
+        description: "Public research university known for computer science, medicine, and engineering.",
+        courses: ["Computer Science", "Medicine", "Engineering", "Business", "Social Sciences"],
+        website: "https://www.uci.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "New York University",
+        location: "New York, NY",
+        ranking: "#35 US News 2025",
+        description: "Private research university in Manhattan with strong arts, business, and law programs.",
+        courses: ["Business", "Arts", "Law", "Medicine", "Social Work"],
+        website: "https://www.nyu.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of California, Santa Barbara",
+        location: "Santa Barbara, CA",
+        ranking: "#35 US News 2025",
+        description: "Public research university known for engineering, sciences, and liberal arts.",
+        courses: ["Engineering", "Computer Science", "Environmental Science", "Psychology", "Liberal Arts"],
+        website: "https://www.ucsb.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Illinois Urbana-Champaign",
+        location: "Urbana, IL",
+        ranking: "#35 US News 2025",
+        description: "Public research university with top-ranked engineering and computer science programs.",
+        courses: ["Engineering", "Computer Science", "Business", "Agriculture", "Liberal Arts"],
+        website: "https://www.illinois.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Wisconsin-Madison",
+        location: "Madison, WI",
+        ranking: "#35 US News 2025",
+        description: "Public research university known for liberal arts, engineering, and business programs.",
+        courses: ["Engineering", "Business", "Medicine", "Liberal Arts", "Agriculture"],
+        website: "https://www.wisc.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Boston College",
+        location: "Chestnut Hill, MA",
+        ranking: "#39 US News 2025",
+        description: "Catholic research university with strong liberal arts and business programs.",
+        courses: ["Business", "Liberal Arts", "Education", "Social Work", "Nursing"],
+        website: "https://www.bc.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Rutgers University",
+        location: "New Brunswick, NJ",
+        ranking: "#40 US News 2025",
+        description: "Public research university with comprehensive programs and strong research output.",
+        courses: ["Engineering", "Business", "Medicine", "Pharmacy", "Liberal Arts"],
+        website: "https://www.rutgers.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Tufts University",
+        location: "Medford, MA",
+        ranking: "#40 US News 2025",
+        description: "Private research university known for international relations and liberal arts.",
+        courses: ["International Relations", "Medicine", "Engineering", "Liberal Arts", "Veterinary Medicine"],
+        website: "https://www.tufts.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Washington",
+        location: "Seattle, WA",
+        ranking: "#40 US News 2025",
+        description: "Public research university with strong medicine, engineering, and computer science programs.",
+        courses: ["Medicine", "Engineering", "Computer Science", "Business", "Public Health"],
+        website: "https://www.uw.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Boston University",
+        location: "Boston, MA",
+        ranking: "#43 US News 2025",
+        description: "Private research university with strong programs in communications and medicine.",
+        courses: ["Communications", "Medicine", "Business", "Engineering", "Liberal Arts"],
+        website: "https://www.bu.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "The Ohio State University",
+        location: "Columbus, OH",
+        ranking: "#43 US News 2025",
+        description: "Large public research university with comprehensive programs and strong athletics.",
+        courses: ["Engineering", "Business", "Medicine", "Agriculture", "Liberal Arts"],
+        website: "https://www.osu.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Purdue University",
+        location: "West Lafayette, IN",
+        ranking: "#43 US News 2025",
+        description: "Public research university renowned for engineering, agriculture, and technology programs.",
+        courses: ["Engineering", "Agriculture", "Technology", "Business", "Sciences"],
+        website: "https://www.purdue.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Maryland, College Park",
+        location: "College Park, MD",
+        ranking: "#46 US News 2025",
+        description: "Public research university with strong programs in engineering, business, and journalism.",
+        courses: ["Engineering", "Business", "Journalism", "Computer Science", "Public Policy"],
+        website: "https://www.umd.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Lehigh University",
+        location: "Bethlehem, PA",
+        ranking: "#47 US News 2025",
+        description: "Private research university known for engineering and business programs.",
+        courses: ["Engineering", "Business", "Arts & Sciences", "Education", "Health"],
+        website: "https://www.lehigh.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Texas A&M University",
+        location: "College Station, TX",
+        ranking: "#47 US News 2025",
+        description: "Public research university with strong engineering, agriculture, and business programs.",
+        courses: ["Engineering", "Agriculture", "Business", "Veterinary Medicine", "Architecture"],
+        website: "https://www.tamu.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Georgia",
+        location: "Athens, GA",
+        ranking: "#47 US News 2025",
+        description: "Public research university with strong programs in business, journalism, and agriculture.",
+        courses: ["Business", "Journalism", "Agriculture", "Veterinary Medicine", "Public Health"],
+        website: "https://www.uga.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Rochester",
+        location: "Rochester, NY",
+        ranking: "#47 US News 2025",
+        description: "Private research university known for medicine, engineering, and music programs.",
+        courses: ["Medicine", "Engineering", "Music", "Business", "Optics"],
+        website: "https://www.rochester.edu",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Virginia Tech",
+        location: "Blacksburg, VA",
+        ranking: "#47 US News 2025",
+        description: "Public research university with outstanding engineering and architecture programs.",
+        courses: ["Engineering", "Architecture", "Agriculture", "Business", "Veterinary Medicine"],
+        website: "https://www.vt.edu",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Wake Forest University",
+        location: "Winston-Salem, NC",
+        ranking: "#47 US News 2025",
+        description: "Private liberal arts university with strong business and medical programs.",
+        courses: ["Business", "Medicine", "Liberal Arts", "Law", "Divinity"],
+        website: "https://www.wfu.edu",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },
   canada: {
     name: "Canada",
+    totalUniversities: "100+",
     universities: [
       {
         name: "University of Toronto",
@@ -267,7 +783,7 @@ const universitiesByCountry = {
       {
         name: "University of Alberta",
         location: "Edmonton, Alberta",
-        ranking: "#125 World University Rankings 2024",
+        ranking: "#6 Research Infosource 2024",
         description: "Major research university with strength in energy and health sciences.",
         courses: ["Engineering", "Medicine", "Business", "Agriculture", "Petroleum Engineering"],
         website: "https://www.ualberta.ca",
@@ -276,20 +792,182 @@ const universitiesByCountry = {
       {
         name: "McMaster University",
         location: "Hamilton, Ontario",
-        ranking: "#152 World University Rankings 2024",
-        description: "Innovative university known for problem-based learning and research.",
+        ranking: "#4 Research Infosource 2024",
+        description: "Innovative university known for problem-based learning and medical research.",
         courses: ["Medicine", "Engineering", "Business", "Health Sciences", "Nuclear Engineering"],
         website: "https://www.mcmaster.ca",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
+        name: "University of Montreal",
+        location: "Montreal, Quebec",
+        ranking: "#5 Research Infosource 2024",
+        description: "Leading French-language university with strong research programs.",
+        courses: ["Medicine", "Engineering", "Business", "Computer Science", "Law"],
+        website: "https://www.umontreal.ca",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
         name: "University of Waterloo",
         location: "Waterloo, Ontario",
-        ranking: "#112 World University Rankings 2024",
-        description: "Leading technology university with strong co-operative education programs.",
+        ranking: "#7 Research Infosource 2024",
+        description: "Leading technology university with world-renowned co-operative education programs.",
         courses: ["Computer Science", "Engineering", "Mathematics", "Business", "Applied Health Sciences"],
         website: "https://uwaterloo.ca",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Calgary",
+        location: "Calgary, Alberta",
+        ranking: "#8 Research Infosource 2024",
+        description: "Dynamic research university known for energy studies and medicine.",
+        courses: ["Engineering", "Medicine", "Business", "Veterinary Medicine", "Geoscience"],
+        website: "https://www.ucalgary.ca",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Queen's University",
+        location: "Kingston, Ontario",
+        ranking: "#9 Research Infosource 2024",
+        description: "Historic university with strong traditions and excellent undergraduate programs.",
+        courses: ["Business", "Engineering", "Medicine", "Law", "Arts & Science"],
+        website: "https://www.queensu.ca",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Western University",
+        location: "London, Ontario",
+        ranking: "#10 Research Infosource 2024",
+        description: "Research-intensive university with beautiful campus and strong alumni network.",
+        courses: ["Business", "Medicine", "Engineering", "Music", "Social Science"],
+        website: "https://www.uwo.ca",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Simon Fraser University",
+        location: "Burnaby, British Columbia",
+        ranking: "#11 Research Infosource 2024",
+        description: "Innovative university with interdisciplinary programs and beautiful mountain campus.",
+        courses: ["Computing Science", "Business", "Communication", "Health Sciences", "Applied Sciences"],
+        website: "https://www.sfu.ca",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Dalhousie University",
+        location: "Halifax, Nova Scotia",
+        ranking: "#12 Research Infosource 2024",
+        description: "Maritime university known for ocean research and professional programs.",
+        courses: ["Medicine", "Engineering", "Dentistry", "Law", "Ocean Studies"],
+        website: "https://www.dal.ca",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Ottawa",
+        location: "Ottawa, Ontario",
+        ranking: "#13 Research Infosource 2024",
+        description: "Bilingual university in Canada's capital with strong government connections.",
+        courses: ["Medicine", "Engineering", "Law", "Business", "Public Administration"],
+        website: "https://www.uottawa.ca",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "York University",
+        location: "Toronto, Ontario",
+        ranking: "#14 Research Infosource 2024",
+        description: "Large comprehensive university with diverse programs and student body.",
+        courses: ["Business", "Engineering", "Liberal Arts", "Health", "Fine Arts"],
+        website: "https://www.yorku.ca",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Université Laval",
+        location: "Quebec City, Quebec",
+        ranking: "#15 Research Infosource 2024",
+        description: "Historic French-language university with strong research programs in Quebec City.",
+        courses: ["Medicine", "Engineering", "Business", "Forestry", "Agriculture"],
+        website: "https://www.ulaval.ca",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Saskatchewan",
+        location: "Saskatoon, Saskatchewan",
+        ranking: "#16 Research Infosource 2024",
+        description: "Research university known for agriculture, veterinary medicine, and health sciences.",
+        courses: ["Agriculture", "Veterinary Medicine", "Engineering", "Medicine", "Pharmacy"],
+        website: "https://www.usask.ca",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Victoria",
+        location: "Victoria, British Columbia",
+        ranking: "#17 Research Infosource 2024",
+        description: "Beautiful west coast university known for environmental studies and co-op programs.",
+        courses: ["Engineering", "Business", "Computer Science", "Environmental Studies", "Law"],
+        website: "https://www.uvic.ca",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Carleton University",
+        location: "Ottawa, Ontario",
+        ranking: "#18 Research Infosource 2024",
+        description: "Capital university known for journalism, engineering, and public affairs.",
+        courses: ["Journalism", "Engineering", "Public Affairs", "Business", "Computer Science"],
+        website: "https://www.carleton.ca",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Memorial University",
+        location: "St. John's, Newfoundland",
+        ranking: "#19 Research Infosource 2024",
+        description: "Atlantic Canada's largest university with strong marine and petroleum programs.",
+        courses: ["Engineering", "Medicine", "Business", "Marine Studies", "Education"],
+        website: "https://www.mun.ca",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Guelph",
+        location: "Guelph, Ontario",
+        ranking: "#20 Research Infosource 2024",
+        description: "Renowned for agriculture, veterinary medicine, and life sciences programs.",
+        courses: ["Veterinary Medicine", "Agriculture", "Life Sciences", "Engineering", "Business"],
+        website: "https://www.uoguelph.ca",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Concordia University",
+        location: "Montreal, Quebec",
+        ranking: "#21 Research Infosource 2024",
+        description: "Dynamic English-language university in Montreal with strong business and engineering programs.",
+        courses: ["Business", "Engineering", "Fine Arts", "Computer Science", "Communications"],
+        website: "https://www.concordia.ca",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Ryerson University (Toronto Metropolitan)",
+        location: "Toronto, Ontario",
+        ranking: "#22 Research Infosource 2024",
+        description: "Urban university focused on innovation, career-focused education, and diversity.",
+        courses: ["Engineering", "Business", "Media", "Health Sciences", "Arts"],
+        website: "https://www.torontomu.ca",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Manitoba",
+        location: "Winnipeg, Manitoba",
+        ranking: "#23 Research Infosource 2024",
+        description: "Western Canada's first university with comprehensive programs and research facilities.",
+        courses: ["Medicine", "Engineering", "Agriculture", "Business", "Architecture"],
+        website: "https://www.umanitoba.ca",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of New Brunswick",
+        location: "Fredericton, New Brunswick",
+        ranking: "#24 Research Infosource 2024",
+        description: "Canada's oldest English-language university with strong engineering and forestry programs.",
+        courses: ["Engineering", "Forestry", "Business", "Computer Science", "Education"],
+        website: "https://www.unb.ca",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },
@@ -599,6 +1277,26 @@ export default function Destinations() {
                   </Card>
                 ))}
               </div>
+              
+              {/* Show More Indicator */}
+              {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].totalUniversities && (
+                <div className="mt-12">
+                  <div className="bg-[var(--edu-blue)] text-white rounded-2xl p-8 text-center">
+                    <GraduationCap className="w-12 h-12 mx-auto mb-4 text-amber-300" />
+                    <h3 className="text-2xl font-bold mb-2">
+                      {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].totalUniversities} Universities Available
+                    </h3>
+                    <p className="text-blue-100 mb-4">
+                      We've shown you some of the top-ranked universities in {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].name}. 
+                      Many more excellent institutions are available for your studies.
+                    </p>
+                    <div className="flex items-center justify-center space-x-2 text-blue-100">
+                      <span>Contact us to explore all your options</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </section>
         ) : (

@@ -52,7 +52,12 @@ export default function DestinationsSection() {
 
   const handleExploreClick = (countrySlug: string) => {
     console.log(`Navigating to: /destinations?country=${countrySlug}`);
-    navigate(`/destinations?country=${countrySlug}`);
+    // Force reload if already on destinations page
+    if (window.location.pathname === '/destinations') {
+      window.location.href = `/destinations?country=${countrySlug}`;
+    } else {
+      navigate(`/destinations?country=${countrySlug}`);
+    }
   };
 
   return (

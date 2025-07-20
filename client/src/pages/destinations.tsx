@@ -468,7 +468,7 @@ export default function Destinations() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   
   useEffect(() => {
-    // Parse URL parameters from window.location.search instead of wouter location
+    // Parse URL parameters from window.location.search
     const urlParams = new URLSearchParams(window.location.search);
     const country = urlParams.get('country');
     console.log('Full URL:', window.location.href);
@@ -484,6 +484,35 @@ export default function Destinations() {
       setSelectedCountry(null);
     }
   }, [location]);
+
+  // Additional effect to handle URL changes when already on destinations page
+  useEffect(() => {
+    const handleStorageChange = () => {
+      // Re-parse URL parameters when navigation occurs
+      const urlParams = new URLSearchParams(window.location.search);
+      const country = urlParams.get('country');
+      
+      if (country && universitiesByCountry[country as keyof typeof universitiesByCountry]) {
+        setSelectedCountry(country);
+      } else {
+        setSelectedCountry(null);
+      }
+    };
+
+    window.addEventListener('popstate', handleStorageChange);
+    
+    // Also listen for any URL changes
+    const originalPushState = history.pushState;
+    history.pushState = function() {
+      originalPushState.apply(history, arguments);
+      setTimeout(handleStorageChange, 0);
+    };
+
+    return () => {
+      window.removeEventListener('popstate', handleStorageChange);
+      history.pushState = originalPushState;
+    };
+  }, []);
 
   const showingUniversities = selectedCountry && universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry];
 

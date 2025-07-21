@@ -2,6 +2,7 @@ import { Star } from "lucide-react";
 import chidiImage from "@assets/portrait-male-student-with-books_23-2148882426_1753087595010.avif";
 import zaraImage from "@assets/istockphoto-1791833349-612x612_1753087696889.jpg";
 import amaraImage from "@assets/smile-student-portrait-black-woman-with-face-mask-holding-file-university-covid-happy-excited-young-african-student-with-education-books-college-campus-pandemic_590464-88226_1753088039653.avif";
+import kwameImage from "@assets/smiling-cheerful-young-adult-african-600nw-1850821510_1753088146502.webp";
 
 const testimonials = [
   {
@@ -13,7 +14,7 @@ const testimonials = [
   {
     name: "Kwame Asante",
     university: "Cambridge University, UK",
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: kwameImage,
     testimonial: "As a Ghanaian student, I thought Cambridge was impossible. EduGlobal showed me it wasn't! Their support from application to arrival in the UK was incredible.",
   },
   {

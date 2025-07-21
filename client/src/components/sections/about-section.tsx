@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const features = [
   {
@@ -64,12 +65,14 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-            <Button 
-              size="lg"
-              className="bg-[var(--edu-blue)] text-white px-8 py-4 text-lg hover:bg-blue-700 shadow-lg"
-            >
-              Learn More About Our Team
-            </Button>
+            <Link href="/about">
+              <Button 
+                size="lg"
+                className="bg-[var(--edu-blue)] text-white px-8 py-4 text-lg hover:bg-blue-700 shadow-lg"
+              >
+                Learn More About Our Team
+              </Button>
+            </Link>
           </div>
           <div className="mt-12 lg:mt-0 lg:col-span-6">
             <img

@@ -344,6 +344,114 @@ const universitiesByCountry = {
         courses: ["Business", "Engineering", "Law", "Design", "Health Sciences"],
         website: "https://www.northumbria.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Brunel University London",
+        location: "Uxbridge, London",
+        ranking: "#39 Complete University Guide 2025",
+        description: "Technology-focused university with strong industry partnerships and excellent facilities.",
+        courses: ["Engineering", "Design", "Business", "Computer Science", "Health Sciences"],
+        website: "https://www.brunel.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Loughborough University",
+        location: "Loughborough, Leicestershire",
+        ranking: "#40 Complete University Guide 2025",
+        description: "Leading university for sport and engineering with outstanding student experience.",
+        courses: ["Sport Science", "Engineering", "Business", "Design", "Computer Science"],
+        website: "https://www.lboro.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Reading",
+        location: "Reading, Berkshire",
+        ranking: "#41 Complete University Guide 2025",
+        description: "Research-intensive university with beautiful campus and strong academic reputation.",
+        courses: ["Agriculture", "Business", "Psychology", "Meteorology", "Real Estate"],
+        website: "https://www.reading.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Kent",
+        location: "Canterbury, Kent",
+        ranking: "#42 Complete University Guide 2025",
+        description: "European university with beautiful campus and strong international connections.",
+        courses: ["Law", "Psychology", "Business", "Computer Science", "Social Sciences"],
+        website: "https://www.kent.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Stirling",
+        location: "Stirling, Scotland",
+        ranking: "#43 Complete University Guide 2025",
+        description: "Beautiful Scottish campus university with excellent student support and research.",
+        courses: ["Psychology", "Education", "Sport", "Business", "Media"],
+        website: "https://www.stir.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Kingston University",
+        location: "Kingston upon Thames, London",
+        ranking: "#44 Complete University Guide 2025",
+        description: "Modern London university with strong creative and professional programs.",
+        courses: ["Art & Design", "Business", "Engineering", "Health Sciences", "Computing"],
+        website: "https://www.kingston.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Oxford Brookes University",
+        location: "Oxford, England",
+        ranking: "#45 Complete University Guide 2025",
+        description: "Modern university in historic Oxford with excellent teaching and student satisfaction.",
+        courses: ["Architecture", "Business", "Health Sciences", "Psychology", "Planning"],
+        website: "https://www.brookes.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Huddersfield",
+        location: "Huddersfield, West Yorkshire",
+        ranking: "#46 Complete University Guide 2025",
+        description: "Student-focused university with excellent graduate employment and industry links.",
+        courses: ["Engineering", "Business", "Health Sciences", "Computing", "Music"],
+        website: "https://www.hud.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Lincoln",
+        location: "Lincoln, Lincolnshire",
+        ranking: "#47 Complete University Guide 2025",
+        description: "Modern university with beautiful waterfront campus and strong student satisfaction.",
+        courses: ["Psychology", "Engineering", "Business", "Computer Science", "Health Sciences"],
+        website: "https://www.lincoln.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Central Lancashire",
+        location: "Preston, Lancashire",
+        ranking: "#48 Complete University Guide 2025",
+        description: "Comprehensive university with diverse programs and strong community engagement.",
+        courses: ["Medicine", "Engineering", "Business", "Media", "Social Work"],
+        website: "https://www.uclan.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Manchester Metropolitan University",
+        location: "Manchester, England",
+        ranking: "#49 Complete University Guide 2025",
+        description: "Large metropolitan university with strong creative and professional programs.",
+        courses: ["Art & Design", "Business", "Education", "Health Sciences", "Computing"],
+        website: "https://www.mmu.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Bradford",
+        location: "Bradford, West Yorkshire",
+        ranking: "#50 Complete University Guide 2025",
+        description: "Diverse university with strong focus on applied research and professional development.",
+        courses: ["Engineering", "Health Sciences", "Business", "Social Sciences", "Computing"],
+        website: "https://www.bradford.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },

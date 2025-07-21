@@ -8,7 +8,7 @@ export default function About() {
       <title>About Us - EduGlobal Consultancy</title>
       <meta name="description" content="Learn about EduGlobal Consultancy's 12+ years of experience helping international students achieve their educational dreams with expert guidance and support." />
       
-      <div className="pt-8">
+      <div className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] mb-6">

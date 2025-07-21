@@ -33,7 +33,7 @@ function App() {
       <TooltipProvider>
         <div className="min-h-screen bg-slate-50">
           <Header />
-          <main>
+          <main className="relative">
             <Router />
           </main>
           <Footer />

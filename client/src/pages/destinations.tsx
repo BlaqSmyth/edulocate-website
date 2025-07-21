@@ -1379,7 +1379,7 @@ export default function Destinations() {
       <title>Study Destinations - EduGlobal Consultancy</title>
       <meta name="description" content="Explore top study destinations including UK, USA, Canada, Australia, New Zealand, and Europe. Find the perfect country for your international education." />
       
-      <div className="pt-8">
+      <div className="pt-20">
         {showingUniversities && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center mb-16">

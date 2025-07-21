@@ -7,7 +7,7 @@ export default function Services() {
       <title>Our Services - EduGlobal Consultancy</title>
       <meta name="description" content="Comprehensive international education services including university selection, application assistance, visa processing, test preparation, and pre-departure support." />
       
-      <div className="pt-8">
+      <div className="pt-20">
         <ServicesSection />
         <ContactSection />
       </div>

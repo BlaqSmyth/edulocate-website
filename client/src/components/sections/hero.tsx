@@ -6,7 +6,7 @@ import graduationImage from "@assets/istockphoto-483505143-612x612_1753086066260
 export default function Hero() {
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-28 lg:pb-24">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg mb-6 text-center">
@@ -64,12 +64,15 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <img
-              src={graduationImage}
-              alt="Happy international students celebrating graduation ceremony"
-              className="w-full rounded-2xl shadow-2xl"
-            />
+          <div className="mt-16 relative sm:max-w-lg sm:mx-auto lg:mt-8 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <div className="relative">
+              <img
+                src={graduationImage}
+                alt="Happy international students celebrating graduation ceremony"
+                className="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
           </div>
         </div>
       </div>

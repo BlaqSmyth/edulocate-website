@@ -12,6 +12,8 @@ This is a full-stack web application for EduGlobal Consultancy, an international
 - Added "Show More" indicators displaying total available universities per destination (4,000+ USA, 100+ Canada)
 - Fixed explore button functionality to navigate to country-specific university information
 - Migrated from in-memory storage to persistent database storage
+- Fixed hero section layout with balanced 6-6 grid columns and proper padding to prevent text-image overlap
+- Added consistent pt-20 padding across all pages to prevent header collisions
 
 ## User Preferences
 

@@ -1,12 +1,13 @@
 import { Star } from "lucide-react";
 import chidiImage from "@assets/portrait-male-student-with-books_23-2148882426_1753087595010.avif";
 import zaraImage from "@assets/istockphoto-1791833349-612x612_1753087696889.jpg";
+import amaraImage from "@assets/smile-student-portrait-black-woman-with-face-mask-holding-file-university-covid-happy-excited-young-african-student-with-education-books-college-campus-pandemic_590464-88226_1753088039653.avif";
 
 const testimonials = [
   {
     name: "Amara Okafor",
     university: "Harvard University, USA",
-    image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: amaraImage,
     testimonial: "From Lagos to Harvard! EduGlobal helped me secure a full scholarship for my MBA. Their essay guidance and interview prep were exceptional. I'm now living my American dream!",
   },
   {

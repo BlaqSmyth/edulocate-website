@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import chidiImage from "@assets/portrait-male-student-with-books_23-2148882426_1753087595010.avif";
+import zaraImage from "@assets/istockphoto-1791833349-612x612_1753087696889.jpg";
 
 const testimonials = [
   {
@@ -29,7 +30,7 @@ const testimonials = [
   {
     name: "Zara Mthembu",
     university: "Oxford University, UK",
-    image: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: zaraImage,
     testimonial: "From South Africa to Oxford - what a journey! EduGlobal's expertise in Rhodes Scholarship applications was invaluable. I'm now studying International Relations at Oxford.",
   },
   {

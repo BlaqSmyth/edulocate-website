@@ -1,5 +1,6 @@
 import { Download, ExternalLink, Play, ArrowRight, Search, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const resources = [
   {
@@ -8,6 +9,7 @@ const resources = [
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     icon: Download,
     action: "Download Guide",
+    url: "/contact",
   },
   {
     title: "Essay Writing Tips",
@@ -15,6 +17,7 @@ const resources = [
     image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     icon: ExternalLink,
     action: "View Tips",
+    url: "/contact",
   },
   {
     title: "Test Prep Resources",
@@ -22,6 +25,7 @@ const resources = [
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     icon: Play,
     action: "Start Prep",
+    url: "/contact",
   },
 ];
 
@@ -32,6 +36,7 @@ const additionalResources = [
     icon: ArrowRight,
     action: "Check Requirements",
     color: "bg-blue-50 text-[var(--edu-blue)]",
+    url: "/destinations",
   },
   {
     title: "Scholarship Database",
@@ -39,6 +44,7 @@ const additionalResources = [
     icon: Search,
     action: "Find Scholarships",
     color: "bg-green-50 text-[var(--edu-green)]",
+    url: "/contact",
   },
   {
     title: "Pre-Departure Checklist",
@@ -46,6 +52,7 @@ const additionalResources = [
     icon: Check,
     action: "Get Checklist",
     color: "bg-amber-50 text-[var(--edu-amber)]",
+    url: "/contact",
   },
 ];
 
@@ -76,12 +83,14 @@ export default function ResourcesSection() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[var(--edu-dark)] mb-3">{resource.title}</h3>
                   <p className="text-[var(--edu-gray)] mb-4">{resource.description}</p>
-                  <Button
-                    variant="link"
-                    className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
-                  >
-                    {resource.action} <IconComponent className="w-4 h-4 ml-1" />
-                  </Button>
+                  <Link href={resource.url}>
+                    <Button
+                      variant="link"
+                      className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
+                    >
+                      {resource.action} <IconComponent className="w-4 h-4 ml-1" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             );
@@ -98,12 +107,14 @@ export default function ResourcesSection() {
                   </div>
                   <h3 className="text-xl font-semibold text-[var(--edu-dark)] mb-3">{resource.title}</h3>
                   <p className="text-[var(--edu-gray)] mb-4">{resource.description}</p>
-                  <Button
-                    variant="link"
-                    className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
-                  >
-                    {resource.action} <IconComponent className="w-4 h-4 ml-1" />
-                  </Button>
+                  <Link href={resource.url}>
+                    <Button
+                      variant="link"
+                      className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
+                    >
+                      {resource.action} <IconComponent className="w-4 h-4 ml-1" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             );

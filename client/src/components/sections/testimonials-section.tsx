@@ -10,31 +10,31 @@ const testimonials = [
   {
     name: "Kwame Asante",
     university: "Cambridge University, UK",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
     testimonial: "As a Ghanaian student, I thought Cambridge was impossible. EduGlobal showed me it wasn't! Their support from application to arrival in the UK was incredible.",
   },
   {
     name: "Fatima Kone",
     university: "University of Toronto, Canada",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
     testimonial: "From Ivory Coast to Canada - EduGlobal made it happen! They helped with everything from university selection to visa processing. Now I'm studying Engineering at UofT.",
   },
   {
     name: "Chidi Okonkwo",
     university: "University of Melbourne, Australia",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
     testimonial: "The journey from Nigeria to Australia seemed overwhelming until I found EduGlobal. They guided me every step of the way. Now I'm pursuing my PhD in Melbourne!",
   },
   {
     name: "Zara Mthembu",
     university: "Oxford University, UK",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
     testimonial: "From South Africa to Oxford - what a journey! EduGlobal's expertise in Rhodes Scholarship applications was invaluable. I'm now studying International Relations at Oxford.",
   },
   {
     name: "Kofi Mensah",
     university: "Stanford University, USA",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
     testimonial: "EduGlobal transformed my dreams into reality. From Ghana to Silicon Valley - I'm now at Stanford studying Computer Science. Their network and guidance are unmatched!",
   },
 ];

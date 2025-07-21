@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-28 lg:pb-24">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-12">
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-5 lg:text-left">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:pr-8">
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg mb-6 text-center">
               <span className="text-lg font-bold">🎓 FREE ADMISSION PROCESSING</span>
               <span className="text-sm ml-2">No Hidden Fees • No Application Charges</span>
@@ -64,12 +64,12 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="mt-16 relative sm:max-w-lg sm:mx-auto lg:mt-8 lg:max-w-none lg:mx-0 lg:col-span-7 lg:flex lg:items-center">
-            <div className="relative w-full max-w-2xl mx-auto">
+          <div className="mt-16 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center lg:pl-8">
+            <div className="relative w-full">
               <img
                 src={graduationImage}
                 alt="Happy international students celebrating graduation ceremony"
-                className="w-full h-auto object-contain rounded-2xl shadow-2xl"
+                className="w-full h-auto object-cover rounded-2xl shadow-2xl"
               />
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">EduGlobal</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">StudyPlug</h3>
             <p className="text-gray-300 mb-6">
               Your trusted partner in international education. Helping students achieve their dreams since 2011.
             </p>

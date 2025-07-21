@@ -1376,7 +1376,7 @@ export default function Destinations() {
 
   return (
     <>
-      <title>Study Destinations - EduGlobal Consultancy</title>
+      <title>Study Destinations - StudyPlug</title>
       <meta name="description" content="Explore top study destinations including UK, USA, Canada, Australia, New Zealand, and Europe. Find the perfect country for your international education." />
       
       <div className="pt-20">

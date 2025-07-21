@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "info@eduglobal.com",
+    details: "info@studyplug.com",
   },
   {
     icon: Clock,
@@ -61,7 +61,7 @@ export default function ContactSection() {
     
     try {
       // Create mailto link for direct email - works without any external services
-      const subject = encodeURIComponent("New Contact Form Submission - EduGlobal Consultancy");
+      const subject = encodeURIComponent("New Contact Form Submission - StudyPlug");
       const body = encodeURIComponent(`
 Name: ${data.name}
 Email: ${data.email}
@@ -72,10 +72,10 @@ Message:
 ${data.message || "No message provided"}
 
 ---
-This inquiry was submitted through the EduGlobal Consultancy website contact form.
+This inquiry was submitted through the StudyPlug website contact form.
       `);
       
-      const mailtoLink = `mailto:info@eduglobal.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:info@studyplug.com?subject=${subject}&body=${body}`;
       
       // Open default email client
       window.open(mailtoLink, '_blank');
@@ -92,7 +92,7 @@ This inquiry was submitted through the EduGlobal Consultancy website contact for
       console.error("Form submission error:", error);
       toast({
         title: "Please contact us directly",
-        description: "Email: info@eduglobal.com | Phone: +1 (555) 123-4567 for immediate assistance.",
+        description: "Email: info@studyplug.com | Phone: +1 (555) 123-4567 for immediate assistance.",
         variant: "destructive",
       });
     } finally {

@@ -1,10 +1,13 @@
-# EduGlobal Consultancy - International Education Platform
+# StudyPlug - International Education Platform
 
 ## Overview
 
-This is a full-stack web application for EduGlobal Consultancy, an international education consulting service. The platform serves as a comprehensive resource for students seeking guidance on studying abroad, featuring information about services, destinations, resources, and a contact system for inquiries.
+This is a full-stack web application for StudyPlug, an international education consulting service. The platform serves as a comprehensive resource for students seeking guidance on studying abroad, featuring information about services, destinations, resources, and a contact system for inquiries.
 
 **Recent Updates (January 2025):**
+- Complete rebranding from "EduGlobal Consultancy" to "StudyPlug" across entire website
+- Updated all company references, testimonials, contact information, and page titles
+- Changed email contact from info@eduglobal.com to info@studyplug.com
 - Enhanced destinations page with comprehensive university databases featuring 50+ institutions per destination
 - Implemented extensive USA university listings based on authentic US News 2025 rankings (52 universities)
 - Expanded Canada university database using Research Infosource 2024 rankings (20+ universities)
@@ -49,7 +52,7 @@ The application follows a modern full-stack architecture with clear separation b
 ### UI Component System
 - shadcn/ui component library with customized theming
 - Comprehensive component collection including forms, dialogs, cards, etc.
-- Custom CSS variables for brand colors (EduGlobal blue, green, amber)
+- Custom CSS variables for brand colors (StudyPlug blue, green, amber)
 - Responsive design with mobile-first approach
 
 ### Page Structure

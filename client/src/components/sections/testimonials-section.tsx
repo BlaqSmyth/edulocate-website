@@ -10,37 +10,37 @@ const testimonials = [
     name: "Amara Okafor",
     university: "Harvard University, USA",
     image: amaraImage,
-    testimonial: "From Lagos to Harvard! EduGlobal helped me secure a full scholarship for my MBA. Their essay guidance and interview prep were exceptional. I'm now living my American dream!",
+    testimonial: "From Lagos to Harvard! StudyPlug helped me secure a full scholarship for my MBA. Their essay guidance and interview prep were exceptional. I'm now living my American dream!",
   },
   {
     name: "Kwame Asante",
     university: "Cambridge University, UK",
     image: kwameImage,
-    testimonial: "As a Ghanaian student, I thought Cambridge was impossible. EduGlobal showed me it wasn't! Their support from application to arrival in the UK was incredible.",
+    testimonial: "As a Ghanaian student, I thought Cambridge was impossible. StudyPlug showed me it wasn't! Their support from application to arrival in the UK was incredible.",
   },
   {
     name: "Fatima Kone",
     university: "University of Toronto, Canada",
     image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-    testimonial: "From Ivory Coast to Canada - EduGlobal made it happen! They helped with everything from university selection to visa processing. Now I'm studying Engineering at UofT.",
+    testimonial: "From Ivory Coast to Canada - StudyPlug made it happen! They helped with everything from university selection to visa processing. Now I'm studying Engineering at UofT.",
   },
   {
     name: "Chidi Okonkwo",
     university: "University of Melbourne, Australia",
     image: chidiImage,
-    testimonial: "The journey from Nigeria to Australia seemed overwhelming until I found EduGlobal. They guided me every step of the way. Now I'm pursuing my PhD in Melbourne!",
+    testimonial: "The journey from Nigeria to Australia seemed overwhelming until I found StudyPlug. They guided me every step of the way. Now I'm pursuing my PhD in Melbourne!",
   },
   {
     name: "Zara Mthembu",
     university: "Oxford University, UK",
     image: zaraImage,
-    testimonial: "From South Africa to Oxford - what a journey! EduGlobal's expertise in Rhodes Scholarship applications was invaluable. I'm now studying International Relations at Oxford.",
+    testimonial: "From South Africa to Oxford - what a journey! StudyPlug's expertise in Rhodes Scholarship applications was invaluable. I'm now studying International Relations at Oxford.",
   },
   {
     name: "Andrew Adewale",
     university: "Stanford University, USA",
     image: andrewImage,
-    testimonial: "EduGlobal transformed my dreams into reality. From Nigeria to Silicon Valley - I'm now at Stanford studying Computer Science. Their network and guidance are unmatched!",
+    testimonial: "StudyPlug transformed my dreams into reality. From Nigeria to Silicon Valley - I'm now at Stanford studying Computer Science. Their network and guidance are unmatched!",
   },
 ];
 

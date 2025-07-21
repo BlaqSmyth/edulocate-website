@@ -47,7 +47,7 @@ export default function AboutSection() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-6">
             <h2 className="text-4xl lg:text-5xl font-bold text-[var(--edu-dark)] mb-6">
-              About EduGlobal Consultancy
+              About StudyPlug
             </h2>
             <p className="text-xl text-[var(--edu-gray)] mb-6">
               For over 12 years, we've been helping students from around the world achieve their educational dreams. Our team of experienced counselors and education experts are dedicated to providing personalized guidance at every step of your journey.

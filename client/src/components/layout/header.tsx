@@ -24,7 +24,7 @@ export default function Header() {
             <div className="flex-shrink-0">
               <Link href="/">
                 <h1 className="text-2xl font-bold text-[var(--edu-blue)] cursor-pointer">
-                  EduGlobal
+                  StudyPlug
                 </h1>
               </Link>
             </div>

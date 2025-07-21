@@ -2,28 +2,40 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    university: "Oxford University, UK",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    testimonial: "EduGlobal made my dream of studying at Oxford a reality. Their guidance throughout the application process was invaluable, and I couldn't have done it without their support.",
+    name: "Amara Okafor",
+    university: "Harvard University, USA",
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    testimonial: "From Lagos to Harvard! EduGlobal helped me secure a full scholarship for my MBA. Their essay guidance and interview prep were exceptional. I'm now living my American dream!",
   },
   {
-    name: "Ahmed Hassan",
-    university: "MIT, USA",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    testimonial: "The team helped me secure a full scholarship to MIT. Their expertise in essay writing and interview preparation was outstanding. Highly recommended!",
+    name: "Kwame Asante",
+    university: "Cambridge University, UK",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    testimonial: "As a Ghanaian student, I thought Cambridge was impossible. EduGlobal showed me it wasn't! Their support from application to arrival in the UK was incredible.",
   },
   {
-    name: "Li Wei",
+    name: "Fatima Kone",
     university: "University of Toronto, Canada",
-    image: "https://pixabay.com/get/gbf820aa1e70792470522e3a2f5ad7ed91f4c827ba443dc76680b76bd931167be056f93a236753f76f3f58c969fdc4d801bc57c1cd2bc8918b371aac9a4e11a00_1280.jpg",
-    testimonial: "From university selection to visa approval, EduGlobal handled everything professionally. I'm now pursuing my Masters in Computer Science at UofT thanks to their guidance.",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    testimonial: "From Ivory Coast to Canada - EduGlobal made it happen! They helped with everything from university selection to visa processing. Now I'm studying Engineering at UofT.",
   },
   {
-    name: "Carlos Rodriguez",
-    university: "University of Sydney, Australia",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    testimonial: "The support didn't end with admission. They helped me find accommodation and even provided pre-departure orientation. Truly comprehensive service!",
+    name: "Chidi Okonkwo",
+    university: "University of Melbourne, Australia",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    testimonial: "The journey from Nigeria to Australia seemed overwhelming until I found EduGlobal. They guided me every step of the way. Now I'm pursuing my PhD in Melbourne!",
+  },
+  {
+    name: "Zara Mthembu",
+    university: "Oxford University, UK",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    testimonial: "From South Africa to Oxford - what a journey! EduGlobal's expertise in Rhodes Scholarship applications was invaluable. I'm now studying International Relations at Oxford.",
+  },
+  {
+    name: "Kofi Mensah",
+    university: "Stanford University, USA",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    testimonial: "EduGlobal transformed my dreams into reality. From Ghana to Silicon Valley - I'm now at Stanford studying Computer Science. Their network and guidance are unmatched!",
   },
 ];
 
@@ -48,7 +60,7 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center mb-6">
@@ -70,18 +82,18 @@ export default function TestimonialsSection() {
               <p className="text-[var(--edu-gray)] italic">"{testimonial.testimonial}"</p>
             </div>
           ))}
+        </div>
 
-          {/* Success Stats Display */}
-          <div className="bg-[var(--edu-blue)] p-8 rounded-2xl shadow-lg text-white md:col-span-2 lg:col-span-1">
-            <h4 className="text-2xl font-bold mb-6">Our Track Record</h4>
-            <div className="space-y-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex justify-between items-center">
-                  <span className="text-blue-100">{stat.label}</span>
-                  <span className="text-2xl font-bold">{stat.value}</span>
-                </div>
-              ))}
-            </div>
+        {/* Success Stats Display */}
+        <div className="bg-[var(--edu-blue)] p-8 rounded-2xl shadow-lg text-white max-w-md mx-auto">
+          <h4 className="text-2xl font-bold mb-6 text-center">Our Track Record</h4>
+          <div className="space-y-6">
+            {stats.map((stat, index) => (
+              <div key={index} className="flex justify-between items-center">
+                <span className="text-blue-100">{stat.label}</span>
+                <span className="text-2xl font-bold">{stat.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

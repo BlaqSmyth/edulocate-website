@@ -9,12 +9,16 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg mb-6 text-center">
+              <span className="text-lg font-bold">🎓 FREE ADMISSION PROCESSING</span>
+              <span className="text-sm ml-2">No Hidden Fees • No Application Charges</span>
+            </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] leading-tight">
               Your Gateway to{" "}
               <span className="text-[var(--edu-blue)]">Global Education</span>
             </h1>
             <p className="mt-6 text-xl text-[var(--edu-gray)] leading-relaxed">
-              We guide international students through every step of their educational journey - from Undergraduate to Postgraduate programs, covering university admission to landing in your dream destination.
+              We guide international students through every step of their educational journey - from Undergraduate to Postgraduate programs, covering university admission to landing in your dream destination. <strong className="text-[var(--edu-green)]">Completely FREE admission processing!</strong>
             </p>
             <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
               <div className="bg-[var(--edu-blue)] text-white px-4 py-2 rounded-lg text-sm font-medium">
@@ -31,9 +35,9 @@ export default function Hero() {
               <Link href="/contact">
                 <Button 
                   size="lg"
-                  className="bg-[var(--edu-blue)] text-white px-8 py-4 text-lg hover:bg-blue-700 shadow-lg"
+                  className="bg-[var(--edu-green)] text-white px-8 py-4 text-lg hover:bg-green-700 shadow-lg"
                 >
-                  Start Your Journey
+                  Get FREE Admission Processing
                 </Button>
               </Link>
               <Button 
@@ -55,8 +59,8 @@ export default function Hero() {
                 <div className="text-sm text-[var(--edu-gray)]">Success Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-[var(--edu-blue)]">50+</div>
-                <div className="text-sm text-[var(--edu-gray)]">Partner Universities</div>
+                <div className="text-2xl font-bold text-[var(--edu-green)]">FREE</div>
+                <div className="text-sm text-[var(--edu-gray)]">Admission Processing</div>
               </div>
             </div>
           </div>

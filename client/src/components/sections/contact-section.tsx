@@ -37,10 +37,10 @@ const contactInfo = [
 ];
 
 const quickStats = [
-  { label: "Response Time", value: "< 24 Hours" },
-  { label: "Consultation", value: "Free", highlight: true },
+  { label: "Admission Processing", value: "100% FREE", highlight: true },
+  { label: "Consultation", value: "FREE", highlight: true },
   { label: "Success Rate", value: "95%" },
-  { label: "Experience", value: "12+ Years" },
+  { label: "Hidden Fees", value: "ZERO", highlight: true },
 ];
 
 export default function ContactSection() {
@@ -86,11 +86,15 @@ export default function ContactSection() {
     <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl mb-8 inline-block">
+            <span className="text-2xl font-bold">🎓 FREE CONSULTATION & ADMISSION PROCESSING</span>
+            <div className="text-sm mt-1">Zero Cost • Expert Guidance • Guaranteed Results</div>
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-[var(--edu-dark)] mb-6">
             Ready to Start Your Journey?
           </h2>
           <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-            Get in touch with our expert counselors for a free consultation and take the first step towards your international education dreams.
+            Get in touch with our expert counselors for a <strong className="text-[var(--edu-green)]">completely FREE consultation and admission processing</strong>. Take the first step towards your international education dreams at absolutely no cost.
           </p>
         </div>
 
@@ -98,7 +102,10 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="lg:col-span-8">
             <div className="bg-slate-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-[var(--edu-dark)] mb-6">Get Free Consultation</h3>
+              <h3 className="text-2xl font-semibold text-[var(--edu-dark)] mb-6">Get FREE Consultation & Admission Processing</h3>
+              <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+                <p className="text-green-800 font-medium">🎓 100% FREE admission processing - No application fees, no hidden charges!</p>
+              </div>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

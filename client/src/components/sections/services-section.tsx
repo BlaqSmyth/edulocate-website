@@ -10,9 +10,9 @@ const services = [
   },
   {
     icon: FileText,
-    title: "Application Assistance",
-    description: "Complete support for your university applications, essays, and documentation to maximize your chances of acceptance.",
-    features: ["Essay writing support", "Document preparation", "Application review"],
+    title: "FREE Application Processing",
+    description: "Complete FREE support for your university applications, essays, and documentation to maximize your chances of acceptance.",
+    features: ["FREE Essay writing support", "FREE Document preparation", "FREE Application review"],
     color: "bg-green-50 text-[var(--edu-green)]",
   },
   {
@@ -50,11 +50,15 @@ export default function ServicesSection() {
     <section className="py-16 lg:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl mb-8 inline-block">
+            <span className="text-2xl font-bold">🎓 100% FREE ADMISSION PROCESSING</span>
+            <div className="text-sm mt-1">No Application Fees • No Processing Charges • No Hidden Costs</div>
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-[var(--edu-dark)] mb-6">
             Complete Support Throughout Your Journey
           </h2>
           <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-            From initial consultation to successful settlement, we support students pursuing Undergraduate, Postgraduate, and PhD programs at every step of their international education adventure.
+            From initial consultation to successful settlement, we support students pursuing Undergraduate, Postgraduate, and PhD programs at every step of their international education adventure. <strong className="text-[var(--edu-green)]">All admission processing services are completely FREE!</strong>
           </p>
           <div className="mt-8 flex flex-wrap gap-6 justify-center">
             <div className="bg-white border-2 border-[var(--edu-blue)] px-6 py-3 rounded-lg">

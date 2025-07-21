@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/hero";
+import ProcessSection from "@/components/sections/process-section";
 import ServicesSection from "@/components/sections/services-section";
 import DestinationsSection from "@/components/sections/destinations-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
@@ -13,6 +14,7 @@ export default function Home() {
       <meta name="description" content="Expert international education consulting services helping students secure admission to top universities worldwide. Complete support from application to settlement." />
       
       <Hero />
+      <ProcessSection />
       <ServicesSection />
       <DestinationsSection />
       <TestimonialsSection />

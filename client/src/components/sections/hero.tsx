@@ -14,8 +14,19 @@ export default function Hero() {
               <span className="text-[var(--edu-blue)]">Global Education</span>
             </h1>
             <p className="mt-6 text-xl text-[var(--edu-gray)] leading-relaxed">
-              We guide international students through every step of their educational journey - from university admission to landing in your dream destination.
+              We guide international students through every step of their educational journey - from Undergraduate to Postgraduate programs, covering university admission to landing in your dream destination.
             </p>
+            <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
+              <div className="bg-[var(--edu-blue)] text-white px-4 py-2 rounded-lg text-sm font-medium">
+                Undergraduate Programs
+              </div>
+              <div className="bg-[var(--edu-green)] text-white px-4 py-2 rounded-lg text-sm font-medium">
+                Postgraduate Programs
+              </div>
+              <div className="bg-[var(--edu-amber)] text-white px-4 py-2 rounded-lg text-sm font-medium">
+                PhD & Research
+              </div>
+            </div>
             <div className="mt-8 flex flex-col sm:flex-row sm:gap-4">
               <Link href="/contact">
                 <Button 

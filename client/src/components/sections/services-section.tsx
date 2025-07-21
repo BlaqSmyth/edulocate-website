@@ -54,8 +54,22 @@ export default function ServicesSection() {
             Complete Support Throughout Your Journey
           </h2>
           <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-            From initial consultation to successful settlement, we're with you at every step of your international education adventure.
+            From initial consultation to successful settlement, we support students pursuing Undergraduate, Postgraduate, and PhD programs at every step of their international education adventure.
           </p>
+          <div className="mt-8 flex flex-wrap gap-6 justify-center">
+            <div className="bg-white border-2 border-[var(--edu-blue)] px-6 py-3 rounded-lg">
+              <div className="text-lg font-semibold text-[var(--edu-blue)]">Bachelor's Degrees</div>
+              <div className="text-sm text-[var(--edu-gray)]">3-4 year programs</div>
+            </div>
+            <div className="bg-white border-2 border-[var(--edu-green)] px-6 py-3 rounded-lg">
+              <div className="text-lg font-semibold text-[var(--edu-green)]">Master's Degrees</div>
+              <div className="text-sm text-[var(--edu-gray)]">1-2 year programs</div>
+            </div>
+            <div className="bg-white border-2 border-[var(--edu-amber)] px-6 py-3 rounded-lg">
+              <div className="text-lg font-semibold text-[var(--edu-amber)]">PhD & Research</div>
+              <div className="text-sm text-[var(--edu-gray)]">3-5 year programs</div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

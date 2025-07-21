@@ -14,7 +14,7 @@ export default function Services() {
               Our Comprehensive Services
             </h1>
             <p className="text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-              From initial consultation to successful settlement abroad, we provide end-to-end support for your international education journey.
+              From initial consultation to successful settlement abroad, we provide end-to-end support for Undergraduate, Postgraduate, and PhD programs across your international education journey.
             </p>
           </div>
         </div>

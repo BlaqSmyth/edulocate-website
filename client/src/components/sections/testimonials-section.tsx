@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import chidiImage from "@assets/portrait-male-student-with-books_23-2148882426_1753087595010.avif";
 
 const testimonials = [
   {
@@ -22,7 +23,7 @@ const testimonials = [
   {
     name: "Chidi Okonkwo",
     university: "University of Melbourne, Australia",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    image: chidiImage,
     testimonial: "The journey from Nigeria to Australia seemed overwhelming until I found EduGlobal. They guided me every step of the way. Now I'm pursuing my PhD in Melbourne!",
   },
   {

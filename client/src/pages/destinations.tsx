@@ -272,6 +272,78 @@ const universitiesByCountry = {
         courses: ["Psychology", "International Relations", "Computer Science", "Medicine", "Business"],
         website: "https://www.sussex.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Hertfordshire",
+        location: "Hatfield, Hertfordshire",
+        ranking: "#31 Complete University Guide 2025",
+        description: "Modern university with strong industry connections and excellent graduate employment rates.",
+        courses: ["Business", "Engineering", "Computer Science", "Health Sciences", "Creative Arts"],
+        website: "https://www.herts.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Coventry University",
+        location: "Coventry, West Midlands",
+        ranking: "#32 Complete University Guide 2025",
+        description: "Dynamic modern university with excellent student satisfaction and industry partnerships.",
+        courses: ["Engineering", "Business", "Design", "Health Sciences", "Computing"],
+        website: "https://www.coventry.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Portsmouth",
+        location: "Portsmouth, Hampshire",
+        ranking: "#33 Complete University Guide 2025",
+        description: "Coastal university with strong research reputation and excellent student support services.",
+        courses: ["Marine Sciences", "Engineering", "Business", "Psychology", "Pharmacy"],
+        website: "https://www.port.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Salford",
+        location: "Salford, Greater Manchester",
+        ranking: "#34 Complete University Guide 2025",
+        description: "Industry-focused university with strong links to business and excellent practical training.",
+        courses: ["Media", "Engineering", "Business", "Health Sciences", "Built Environment"],
+        website: "https://www.salford.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Greenwich",
+        location: "Greenwich, London",
+        ranking: "#35 Complete University Guide 2025",
+        description: "Historic university with beautiful campus and strong professional programs.",
+        courses: ["Architecture", "Engineering", "Business", "Computing", "Education"],
+        website: "https://www.gre.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of East London",
+        location: "London, England",
+        ranking: "#36 Complete University Guide 2025",
+        description: "Diverse London university with strong community focus and professional programs.",
+        courses: ["Psychology", "Business", "Law", "Health Sciences", "Architecture"],
+        website: "https://www.uel.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Essex",
+        location: "Colchester, Essex",
+        ranking: "#37 Complete University Guide 2025",
+        description: "Research-intensive university with strong social sciences and excellent international reputation.",
+        courses: ["Political Science", "Economics", "Psychology", "Computer Science", "Law"],
+        website: "https://www.essex.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Northumbria University",
+        location: "Newcastle, England",
+        ranking: "#38 Complete University Guide 2025",
+        description: "Modern university with excellent industry connections and strong graduate employment.",
+        courses: ["Business", "Engineering", "Law", "Design", "Health Sciences"],
+        website: "https://www.northumbria.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   },

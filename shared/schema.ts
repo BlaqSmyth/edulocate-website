@@ -1,21 +1,12 @@
-import { pgTable, text, serial, timestamp } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const contactInquiries = pgTable("contact_inquiries", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
-  phone: text("phone").default(""),
-  country: text("country").default(""),
-  message: text("message").default(""),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
+// Contact form schema for Formspree integration
+export const contactFormSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
+  country: z.string().optional(),
+  message: z.string().optional(),
 });
 
-export const insertContactInquirySchema = createInsertSchema(contactInquiries).omit({
-  id: true,
-  createdAt: true,
-});
-
-export type InsertContactInquiry = z.infer<typeof insertContactInquirySchema>;
-export type ContactInquiry = typeof contactInquiries.$inferSelect;
+export type ContactFormData = z.infer<typeof contactFormSchema>;

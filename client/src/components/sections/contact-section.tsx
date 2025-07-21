@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactInquirySchema } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
+import { contactFormSchema } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
-import type { InsertContactInquiry } from "@shared/schema";
+import type { ContactFormData } from "@shared/schema";
 
 const contactInfo = [
   {
@@ -45,9 +43,10 @@ const quickStats = [
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const form = useForm<InsertContactInquiry>({
-    resolver: zodResolver(insertContactInquirySchema),
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -57,29 +56,45 @@ export default function ContactSection() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactInquiry) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Using Formspree for form submission
+      const response = await fetch("https://formspree.io/f/xdknqkqp", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone || "",
+          country: data.country || "",
+          message: data.message || "",
+          _subject: "New Contact Form Submission - EduGlobal Consultancy",
+        }),
       });
-      form.reset();
-    },
-    onError: (error: any) => {
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
       toast({
         title: "Failed to send message",
-        description: error.message || "Please try again later.",
+        description: "Please try again later or contact us directly.",
         variant: "destructive",
       });
-    },
-  });
-
-  const onSubmit = (data: InsertContactInquiry) => {
-    contactMutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -209,9 +224,9 @@ export default function ContactSection() {
                     type="submit"
                     size="lg"
                     className="w-full bg-[var(--edu-blue)] text-white hover:bg-blue-700"
-                    disabled={contactMutation.isPending}
+                    disabled={isSubmitting}
                   >
-                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-5 h-5 ml-2" />
                   </Button>
                 </form>

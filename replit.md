@@ -5,15 +5,15 @@
 This is a full-stack web application for EduGlobal Consultancy, an international education consulting service. The platform serves as a comprehensive resource for students seeking guidance on studying abroad, featuring information about services, destinations, resources, and a contact system for inquiries.
 
 **Recent Updates (January 2025):**
-- Added PostgreSQL database integration with Neon serverless
 - Enhanced destinations page with comprehensive university databases featuring 50+ institutions per destination
 - Implemented extensive USA university listings based on authentic US News 2025 rankings (52 universities)
 - Expanded Canada university database using Research Infosource 2024 rankings (20+ universities)
 - Added "Show More" indicators displaying total available universities per destination (4,000+ USA, 100+ Canada)
 - Fixed explore button functionality to navigate to country-specific university information
-- Migrated from in-memory storage to persistent database storage
 - Fixed hero section layout with balanced 6-6 grid columns and proper padding to prevent text-image overlap
 - Added consistent pt-20 padding across all pages to prevent header collisions
+- Removed database dependency and implemented Formspree for contact form submissions
+- Simplified architecture for static hosting compatibility
 
 ## User Preferences
 
@@ -39,19 +39,12 @@ The application follows a modern full-stack architecture with clear separation b
 
 ## Key Components
 
-### Database & Data Layer
-- **Database**: PostgreSQL with Neon serverless hosting
-- **ORM**: Drizzle ORM configured for PostgreSQL
-- **Schema**: Centralized in `shared/schema.ts` for type safety
-- **Storage**: DatabaseStorage implementation using PostgreSQL for persistent data
-- **Connection**: Configured in `server/db.ts` with WebSocket support
-- **Tables**: Contact inquiries table with proper schema and indexing
-
 ### Contact Management System
 - Contact inquiry form with validation using Zod schemas
-- API endpoints for creating and retrieving contact inquiries
-- Form validation on both client and server sides
+- Formspree integration for form submissions (no database required)
+- Form validation on client side with error handling
 - Toast notifications for user feedback
+- Direct email delivery to business inbox
 
 ### UI Component System
 - shadcn/ui component library with customized theming
@@ -69,11 +62,11 @@ The application follows a modern full-stack architecture with clear separation b
 
 ## Data Flow
 
-1. **Client Requests**: React components make API calls using TanStack Query
-2. **Server Processing**: Express routes handle API requests with validation
-3. **Data Storage**: Currently in-memory storage, designed for easy database migration
-4. **Response Handling**: Structured JSON responses with error handling
-5. **Client Updates**: React Query manages cache invalidation and UI updates
+1. **Static Content**: University data and information served directly from frontend
+2. **Contact Forms**: Submitted directly to Formspree service for email delivery
+3. **Client-Side Validation**: Form validation using Zod schemas
+4. **Response Handling**: Toast notifications for user feedback
+5. **Static Hosting Ready**: No server-side dependencies for core functionality
 
 ## External Dependencies
 
@@ -106,15 +99,15 @@ The application follows a modern full-stack architecture with clear separation b
 - Static file serving for production assets
 - Environment-based configuration
 
-### Database Strategy
-- Drizzle ORM configured for PostgreSQL with Neon serverless
-- Migration system ready for schema evolution
-- Current in-memory storage allows for rapid development
-- Easy migration path to persistent database storage
+### Hosting Strategy
+- Static site compatible (no database dependencies)
+- Contact forms handled via Formspree service
+- Ready for deployment on Vercel, Netlify, or similar platforms
+- Cost-effective hosting with free tier options
 
 ### Environment Configuration
-- DATABASE_URL for PostgreSQL connection
 - NODE_ENV for environment-specific behavior
 - REPL_ID detection for Replit-specific features
+- No database credentials required
 
 The architecture supports easy scaling from development to production, with clear interfaces between components and a database-ready foundation using modern web development practices.

@@ -3,6 +3,7 @@ import chidiImage from "@assets/portrait-male-student-with-books_23-2148882426_1
 import zaraImage from "@assets/istockphoto-1791833349-612x612_1753087696889.jpg";
 import amaraImage from "@assets/smile-student-portrait-black-woman-with-face-mask-holding-file-university-covid-happy-excited-young-african-student-with-education-books-college-campus-pandemic_590464-88226_1753088039653.avif";
 import kwameImage from "@assets/smiling-cheerful-young-adult-african-600nw-1850821510_1753088146502.webp";
+import andrewImage from "@assets/african-man-7398921_1280_1753089104177.jpg";
 
 const testimonials = [
   {
@@ -36,10 +37,10 @@ const testimonials = [
     testimonial: "From South Africa to Oxford - what a journey! EduGlobal's expertise in Rhodes Scholarship applications was invaluable. I'm now studying International Relations at Oxford.",
   },
   {
-    name: "Kofi Mensah",
+    name: "Andrew Adewale",
     university: "Stanford University, USA",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-    testimonial: "EduGlobal transformed my dreams into reality. From Ghana to Silicon Valley - I'm now at Stanford studying Computer Science. Their network and guidance are unmatched!",
+    image: andrewImage,
+    testimonial: "EduGlobal transformed my dreams into reality. From Nigeria to Silicon Valley - I'm now at Stanford studying Computer Science. Their network and guidance are unmatched!",
   },
 ];
 

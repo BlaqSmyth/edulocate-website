@@ -60,36 +60,39 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // Using Formspree for form submission
-      const response = await fetch("https://formspree.io/f/xdknqkqp", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone || "",
-          country: data.country || "",
-          message: data.message || "",
-          _subject: "New Contact Form Submission - EduGlobal Consultancy",
-        }),
-      });
+      // Create mailto link for direct email - works without any external services
+      const subject = encodeURIComponent("New Contact Form Submission - EduGlobal Consultancy");
+      const body = encodeURIComponent(`
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || "Not provided"}
+Preferred Destination: ${data.country || "Not specified"}
 
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "We'll get back to you within 24 hours.",
-        });
-        form.reset();
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
+Message:
+${data.message || "No message provided"}
+
+---
+This inquiry was submitted through the EduGlobal Consultancy website contact form.
+      `);
+      
+      const mailtoLink = `mailto:info@eduglobal.com?subject=${subject}&body=${body}`;
+      
+      // Open default email client
+      window.open(mailtoLink, '_blank');
+      
+      // Show success message
       toast({
-        title: "Failed to send message",
-        description: "Please try again later or contact us directly.",
+        title: "Email client opened!",
+        description: "Your default email app should open with a pre-filled message. Please send it to complete your inquiry, or call us directly for immediate assistance.",
+      });
+      
+      form.reset();
+      
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Please contact us directly",
+        description: "Email: info@eduglobal.com | Phone: +1 (555) 123-4567 for immediate assistance.",
         variant: "destructive",
       });
     } finally {

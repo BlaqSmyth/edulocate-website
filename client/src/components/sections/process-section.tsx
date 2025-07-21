@@ -97,7 +97,7 @@ export default function ProcessSection() {
                   {/* Action Button */}
                   <Link href={step.buttonLink}>
                     <Button 
-                      className="bg-pink-400 hover:bg-pink-500 text-white w-full rounded-full py-3 font-medium transition-colors"
+                      className="bg-[var(--edu-blue)] hover:bg-blue-700 text-white w-full rounded-full py-3 font-medium transition-colors"
                     >
                       {step.buttonText}
                     </Button>

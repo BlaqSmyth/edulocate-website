@@ -47,17 +47,17 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[var(--edu-dark)] mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--edu-dark)] mb-6">
             Just <span className="italic text-[var(--edu-blue)]">4 Easy</span> steps to achieving your{" "}
             <span className="italic text-[var(--edu-blue)]">Dream</span>
           </h2>
-          <p className="text-lg text-[var(--edu-gray)] max-w-3xl mx-auto mb-2">
+          <p className="text-base sm:text-lg text-[var(--edu-gray)] max-w-3xl mx-auto mb-2">
             Experience the thrill of international education with ease.
           </p>
-          <p className="text-lg text-[var(--edu-gray)] max-w-3xl mx-auto mb-2">
+          <p className="text-base sm:text-lg text-[var(--edu-gray)] max-w-3xl mx-auto mb-2">
             Our community makes studying abroad a reality at your fingertips.
           </p>
-          <p className="text-lg text-[var(--edu-gray)] max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-[var(--edu-gray)] max-w-3xl mx-auto">
             The only challenge? Deciding which world-class university to attend!
           </p>
         </div>
@@ -117,15 +117,15 @@ export default function ProcessSection() {
 
         {/* Free Service Banner */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-6 rounded-2xl inline-block shadow-lg">
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              <div className="text-2xl font-bold">🎓 100% FREE PROCESS</div>
-              <div className="text-lg">•</div>
-              <div className="text-lg font-medium">Zero Hidden Charges</div>
-              <div className="text-lg">•</div>
-              <div className="text-lg font-medium">Expert Guidance Included</div>
+          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-8 py-4 sm:py-6 rounded-2xl inline-block shadow-lg">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
+              <div className="text-lg sm:text-2xl font-bold">🎓 100% FREE PROCESS</div>
+              <div className="text-sm sm:text-lg hidden sm:block">•</div>
+              <div className="text-sm sm:text-lg font-medium">Zero Hidden Charges</div>
+              <div className="text-sm sm:text-lg hidden sm:block">•</div>
+              <div className="text-sm sm:text-lg font-medium">Expert Guidance Included</div>
             </div>
-            <div className="text-sm mt-2 opacity-90">
+            <div className="text-xs sm:text-sm mt-2 opacity-90">
               Complete admission processing at absolutely no cost to you
             </div>
           </div>

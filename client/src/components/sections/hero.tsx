@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Play } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import graduationImage from "@assets/istockphoto-483505143-612x612_1753086066260.jpg";
 
@@ -31,7 +31,7 @@ export default function Hero() {
                 PhD & Research
               </div>
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row sm:gap-4">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button 
                   size="lg"
@@ -40,14 +40,6 @@ export default function Hero() {
                   Get FREE Admission Processing
                 </Button>
               </Link>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="mt-4 sm:mt-0 border-2 border-[var(--edu-blue)] text-[var(--edu-blue)] px-8 py-4 text-lg hover:bg-[var(--edu-blue)] hover:text-white"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Success Stories
-              </Button>
             </div>
             <div className="mt-8 flex items-center justify-center lg:justify-start space-x-8">
               <div className="text-center">

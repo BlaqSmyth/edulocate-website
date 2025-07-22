@@ -79,8 +79,8 @@ export default function ProcessSection() {
                 <div className="bg-white rounded-2xl p-8 pt-12 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full flex flex-col">
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-purple-600" />
+                    <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
+                      <IconComponent className="w-10 h-10 text-purple-600" />
                     </div>
                   </div>
 

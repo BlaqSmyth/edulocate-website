@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import WhatsAppChat from "@/components/ui/whatsapp-chat";
 import Home from "@/pages/home.tsx";
 import Services from "@/pages/services.tsx";
 import Destinations from "@/pages/destinations.tsx";
@@ -38,6 +39,7 @@ function App() {
           </main>
           <Footer />
         </div>
+        <WhatsAppChat />
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>

@@ -76,28 +76,28 @@ export default function ProcessSection() {
                 </div>
 
                 {/* Card */}
-                <div className="bg-white rounded-2xl p-8 pt-12 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full flex flex-col">
+                <div className="group bg-white hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-500 hover:to-pink-400 rounded-2xl p-8 pt-12 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 text-center h-full flex flex-col">
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-10 h-10 text-purple-600" />
+                    <div className="w-20 h-20 bg-purple-100 group-hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-500">
+                      <IconComponent className="w-10 h-10 text-purple-600 group-hover:text-white transition-colors duration-500" />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-[var(--edu-dark)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--edu-dark)] group-hover:text-white mb-4 transition-colors duration-500">
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[var(--edu-gray)] mb-8 flex-grow">
+                  <p className="text-[var(--edu-gray)] group-hover:text-white/90 mb-8 flex-grow transition-colors duration-500">
                     {step.description}
                   </p>
 
                   {/* Action Button */}
                   <Link href={step.buttonLink}>
                     <Button 
-                      className="bg-[var(--edu-blue)] hover:bg-blue-700 text-white w-full rounded-full py-3 font-medium transition-colors"
+                      className="bg-[var(--edu-blue)] hover:bg-blue-700 group-hover:bg-white group-hover:text-purple-600 group-hover:hover:bg-gray-100 text-white w-full rounded-full py-3 font-medium transition-all duration-500"
                     >
                       {step.buttonText}
                     </Button>

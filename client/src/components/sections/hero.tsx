@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-28 lg:pb-24">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:pr-8">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:pr-8 mt-8 lg:mt-0">
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-6 py-3 rounded-lg mb-6 text-center">
               <div className="text-sm sm:text-lg font-bold">🎓 FREE ADMISSION PROCESSING</div>
               <div className="text-xs sm:text-sm mt-1">No Hidden Fees • No Application Charges</div>
@@ -56,7 +56,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="mt-16 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center lg:pl-8">
+          <div className="relative sm:max-w-lg sm:mx-auto lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center lg:pl-8">
             <div className="relative w-full">
               <img
                 src={graduationImage}

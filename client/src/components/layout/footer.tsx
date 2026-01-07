@@ -89,49 +89,49 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Destinations */}
+          {/* UK Regions */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Destinations</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">UK Universities</h4>
             <ul className="space-y-3 text-gray-300">
               <li>
                 <Link href="/destinations">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    United Kingdom
+                    England
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/destinations">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    United States
+                    Scotland
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/destinations">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    Canada
+                    Wales
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/destinations">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    Australia
+                    Northern Ireland
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/destinations">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    New Zealand
+                    London
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/destinations">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    Europe
+                    Russell Group
                   </span>
                 </Link>
               </li>
@@ -189,7 +189,7 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © 2024 EduGlobal Consultancy. All rights reserved.
+            © 2024 StudyPlug. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-300 mt-4 md:mt-0">
             <span className="hover:text-white transition-colors cursor-pointer">

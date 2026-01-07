@@ -15,10 +15,10 @@ export default function Hero() {
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] leading-tight">
               Your Gateway to{" "}
-              <span className="text-[var(--edu-blue)]">Global Education</span>
+              <span className="text-[var(--edu-blue)]">Study in the UK</span>
             </h1>
             <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-[var(--edu-gray)] leading-relaxed">
-              We guide international students through every step of their educational journey - from Undergraduate to Postgraduate programs, covering university admission to landing in your dream destination. <strong className="text-[var(--edu-green)]">Completely FREE admission processing!</strong>
+              We guide international students through every step of their UK educational journey - from Undergraduate to Postgraduate programs, covering university admission to landing in the United Kingdom. <strong className="text-[var(--edu-green)]">Completely FREE admission processing!</strong>
             </p>
             <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-center lg:justify-start">
               <div className="bg-[var(--edu-blue)] text-white px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium">

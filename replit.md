@@ -1,20 +1,23 @@
-# StudyPlug - International Education Platform
+# StudyPlug - UK Education Platform
 
 ## Overview
 
-This is a full-stack web application for StudyPlug, an international education consulting service. The platform serves as a comprehensive resource for students seeking guidance on studying abroad, featuring information about services, destinations, resources, and a contact system for inquiries.
+This is a full-stack web application for StudyPlug, a UK-focused education consulting service. The platform serves as a comprehensive resource for international students seeking guidance on studying in the United Kingdom, featuring information about services, UK universities, resources, and a contact system for inquiries.
 
 **Recent Updates (January 2025):**
+- **UK-Only Focus**: Refocused entire website to exclusively serve students interested in studying in the United Kingdom
+- Removed all non-UK destinations (USA, Canada, Australia, New Zealand, Europe)
+- Updated hero section: "Your Gateway to Study in the UK"
+- Redesigned destinations section to showcase UK regions (England, Scotland, Wales, Northern Ireland, London, Russell Group)
+- Comprehensive UK university database with 30+ top institutions based on Complete University Guide 2025 rankings
 - Complete rebranding from "EduGlobal Consultancy" to "StudyPlug" across entire website
 - Updated all company references, testimonials, contact information, and page titles
-- Changed email contact from info@eduglobal.com to info@studyplug.com
-- Enhanced destinations page with comprehensive university databases featuring 50+ institutions per destination
-- Implemented extensive USA university listings based on authentic US News 2025 rankings (52 universities)
-- Expanded Canada university database using Research Infosource 2024 rankings (20+ universities)
-- Added "Show More" indicators displaying total available universities per destination (4,000+ USA, 100+ Canada)
-- Fixed explore button functionality to navigate to country-specific university information
-- Fixed hero section layout with balanced 6-6 grid columns and proper padding to prevent text-image overlap
+- Changed email contact to info@studyplug.com
+- Mobile-first responsive design with image-first hero layout on mobile
+- Fixed hero section layout with balanced grid columns and proper padding
 - Added consistent pt-20 padding across all pages to prevent header collisions
+- Floating WhatsApp chat button for instant communication
+- FREE admission processing prominently emphasized throughout
 - Removed database dependency and implemented Formspree for contact form submissions
 - Simplified architecture for static hosting compatibility
 
@@ -56,11 +59,11 @@ The application follows a modern full-stack architecture with clear separation b
 - Responsive design with mobile-first approach
 
 ### Page Structure
-- **Home**: Hero section with service overview and statistics
-- **Services**: Detailed service offerings (university selection, applications, visa processing)
-- **Destinations**: Information about study destinations worldwide
+- **Home**: Hero section with UK-focused service overview and statistics
+- **Services**: Detailed service offerings (university selection, applications, UK visa processing)
+- **Destinations**: Information about UK regions and universities (England, Scotland, Wales, Northern Ireland)
 - **About**: Company information and testimonials
-- **Resources**: Study guides and preparation materials
+- **Resources**: Study guides and preparation materials for UK education
 - **Contact**: Contact form and company information
 
 ## Data Flow

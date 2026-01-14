@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@assets/ChatGPT_Image_Jan_14,_2026,_03_53_09_PM_1768406021429.png";
 
 export default function Header() {
   const [location] = useLocation();
@@ -23,9 +24,11 @@ export default function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
-                <h1 className="text-2xl font-bold text-[var(--edu-blue)] cursor-pointer">
-                  EduLocate
-                </h1>
+                <img 
+                  src={logoImage} 
+                  alt="EduLocate" 
+                  className="h-10 cursor-pointer"
+                />
               </Link>
             </div>
             <div className="hidden md:block ml-10">

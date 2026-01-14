@@ -58,13 +58,13 @@ export default function Header() {
           </div>
           <div className="md:hidden">
             <button
-              className="p-2"
+              className="p-3 bg-[var(--edu-blue)] rounded-xl shadow-lg hover:bg-blue-700 transition-all duration-300 active:scale-95"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="h-20 w-20 text-[var(--edu-dark)]" />
+                <X className="h-12 w-12 text-white" />
               ) : (
-                <Menu className="h-20 w-20 text-[var(--edu-dark)]" />
+                <Menu className="h-12 w-12 text-white" />
               )}
             </button>
           </div>

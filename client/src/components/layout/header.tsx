@@ -36,7 +36,7 @@ export default function Header() {
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
                     <span
-                      className={`transition-colors font-medium cursor-pointer ${
+                      className={`transition-colors font-medium text-lg cursor-pointer ${
                         location === item.href
                           ? "text-[var(--edu-blue)]"
                           : "text-[var(--edu-dark)] hover:text-[var(--edu-blue)]"

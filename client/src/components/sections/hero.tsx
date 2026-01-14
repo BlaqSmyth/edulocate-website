@@ -6,7 +6,7 @@ import graduationImage from "@assets/istockphoto-483505143-612x612_1753086066260
 export default function Hero() {
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-28 lg:pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 lg:pt-12 lg:pb-24">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:pr-8 mt-8 lg:mt-0">
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-6 py-3 rounded-lg mb-6 text-center">

@@ -57,17 +57,16 @@ export default function Header() {
             </Link>
           </div>
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
+            <button
+              className="p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="h-24 w-24" />
+                <X className="h-20 w-20 text-[var(--edu-dark)]" />
               ) : (
-                <Menu className="h-24 w-24" />
+                <Menu className="h-20 w-20 text-[var(--edu-dark)]" />
               )}
-            </Button>
+            </button>
           </div>
         </div>
 

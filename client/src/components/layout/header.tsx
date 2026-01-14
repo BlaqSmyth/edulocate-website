@@ -19,15 +19,15 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center -ml-2">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-44">
+          <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
                 <img 
                   src={logoImage} 
                   alt="EduLocate" 
-                  className="h-16 cursor-pointer"
+                  className="h-52 cursor-pointer"
                 />
               </Link>
             </div>
@@ -59,14 +59,13 @@ export default function Header() {
           <div className="md:hidden">
             <Button
               variant="ghost"
-              size="lg"
+              size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-3"
             >
               {isMobileMenuOpen ? (
-                <X className="h-10 w-10" />
+                <X className="h-6 w-6" />
               ) : (
-                <Menu className="h-10 w-10" />
+                <Menu className="h-6 w-6" />
               )}
             </Button>
           </div>

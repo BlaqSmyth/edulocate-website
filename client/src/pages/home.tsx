@@ -10,7 +10,7 @@ import ContactSection from "@/components/sections/contact-section";
 export default function Home() {
   return (
     <>
-      <title>StudyPlug - Your Gateway to Global Education</title>
+      <title>EduLocate - Your Gateway to Global Education</title>
       <meta name="description" content="Expert international education consulting services helping students secure admission to top universities worldwide. Complete support from application to settlement." />
       
       <Hero />

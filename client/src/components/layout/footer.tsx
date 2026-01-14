@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">StudyPlug</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">EduLocate</h3>
             <p className="text-gray-300 mb-6">
               Your trusted partner in international education. Helping students achieve their dreams since 2011.
             </p>
@@ -189,7 +189,7 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © 2024 StudyPlug. All rights reserved.
+            © 2024 EduLocate. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-300 mt-4 md:mt-0">
             <span className="hover:text-white transition-colors cursor-pointer">

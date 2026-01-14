@@ -4,7 +4,7 @@ import ContactSection from "@/components/sections/contact-section";
 export default function Resources() {
   return (
     <>
-      <title>Resources & Guides - StudyPlug</title>
+      <title>Resources & Guides - EduLocate</title>
       <meta name="description" content="Access comprehensive guides, tips, and resources for international education including university selection, essay writing, test preparation, and visa requirements." />
       
       <div className="pt-20">

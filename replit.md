@@ -1,8 +1,8 @@
-# StudyPlug - UK Education Platform
+# EduLocate - UK Education Platform
 
 ## Overview
 
-This is a full-stack web application for StudyPlug, a UK-focused education consulting service. The platform serves as a comprehensive resource for international students seeking guidance on studying in the United Kingdom, featuring information about services, UK universities, resources, and a contact system for inquiries.
+This is a full-stack web application for EduLocate, a UK-focused education consulting service. The platform serves as a comprehensive resource for international students seeking guidance on studying in the United Kingdom, featuring information about services, UK universities, resources, and a contact system for inquiries.
 
 **Recent Updates (January 2025):**
 - **UK-Only Focus**: Refocused entire website to exclusively serve students interested in studying in the United Kingdom
@@ -10,7 +10,7 @@ This is a full-stack web application for StudyPlug, a UK-focused education consu
 - Updated hero section: "Your Gateway to Study in the UK"
 - Redesigned destinations section to showcase UK regions (England, Scotland, Wales, Northern Ireland, London, Russell Group)
 - Comprehensive UK university database with 30+ top institutions based on Complete University Guide 2025 rankings
-- Complete rebranding from "EduGlobal Consultancy" to "StudyPlug" across entire website
+- Complete rebranding from "EduGlobal Consultancy" to "EduLocate" across entire website
 - Updated all company references, testimonials, contact information, and page titles
 - Changed email contact to info@studyplug.com
 - Mobile-first responsive design with image-first hero layout on mobile
@@ -55,7 +55,7 @@ The application follows a modern full-stack architecture with clear separation b
 ### UI Component System
 - shadcn/ui component library with customized theming
 - Comprehensive component collection including forms, dialogs, cards, etc.
-- Custom CSS variables for brand colors (StudyPlug blue, green, amber)
+- Custom CSS variables for brand colors (EduLocate blue, green, amber)
 - Responsive design with mobile-first approach
 
 ### Page Structure

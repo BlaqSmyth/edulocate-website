@@ -331,7 +331,7 @@ export default function Destinations() {
 
   return (
     <>
-      <title>Study in the UK - StudyPlug</title>
+      <title>Study in the UK - EduLocate</title>
       <meta name="description" content="Explore top UK universities including Oxford, Cambridge, and Imperial College. Find your perfect university in England, Scotland, Wales, or Northern Ireland." />
       
       <div className="pt-20">

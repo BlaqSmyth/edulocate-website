@@ -31,7 +31,7 @@ export default function Header() {
                 />
               </Link>
             </div>
-            <div className="hidden md:block ml-10">
+            <div className="hidden md:flex md:flex-1 md:justify-center">
               <div className="flex space-x-8">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>

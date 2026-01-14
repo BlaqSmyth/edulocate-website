@@ -37,7 +37,7 @@ export default function Hero() {
                   size="lg"
                   className="bg-[var(--edu-green)] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover:bg-green-700 shadow-lg w-full sm:w-auto"
                 >
-                  Get FREE Admission Processing
+                  Book a Free 1-on-1 Consultation
                 </Button>
               </Link>
             </div>

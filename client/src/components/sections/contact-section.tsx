@@ -15,12 +15,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Main Office",
-    details: "123 Education Street\nGlobal City, GC 12345",
+    details: "411 Ilford Lane, Ilford\nEngland, IG1 2SN",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: "+1 (555) 123-4567",
+    details: "07438974271",
   },
   {
     icon: Mail,
@@ -92,7 +92,7 @@ This inquiry was submitted through the EduLocate website contact form.
       console.error("Form submission error:", error);
       toast({
         title: "Please contact us directly",
-        description: "Email: info@edulocate.com | Phone: +1 (555) 123-4567 for immediate assistance.",
+        description: "Email: info@edulocate.com | Phone: 07438974271 for immediate assistance.",
         variant: "destructive",
       });
     } finally {

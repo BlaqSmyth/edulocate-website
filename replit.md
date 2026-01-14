@@ -12,7 +12,7 @@ This is a full-stack web application for EduLocate, a UK-focused education consu
 - Comprehensive UK university database with 30+ top institutions based on Complete University Guide 2025 rankings
 - Complete rebranding from "EduGlobal Consultancy" to "EduLocate" across entire website
 - Updated all company references, testimonials, contact information, and page titles
-- Changed email contact to info@edulocate.com
+- Changed email contact to info@edulocate.org
 - Updated main office address: 411 Ilford Lane, Ilford, England, IG1 2SN
 - Updated phone number: 07438974271
 - Mobile-first responsive design with image-first hero layout on mobile

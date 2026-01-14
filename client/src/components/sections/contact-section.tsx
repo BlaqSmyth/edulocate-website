@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "info@edulocate.com",
+    details: "info@edulocate.org",
   },
   {
     icon: Clock,
@@ -75,7 +75,7 @@ ${data.message || "No message provided"}
 This inquiry was submitted through the EduLocate website contact form.
       `);
       
-      const mailtoLink = `mailto:info@edulocate.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:info@edulocate.org?subject=${subject}&body=${body}`;
       
       // Open default email client
       window.open(mailtoLink, '_blank');
@@ -92,7 +92,7 @@ This inquiry was submitted through the EduLocate website contact form.
       console.error("Form submission error:", error);
       toast({
         title: "Please contact us directly",
-        description: "Email: info@edulocate.com | Phone: 07438974271 for immediate assistance.",
+        description: "Email: info@edulocate.org | Phone: 07438974271 for immediate assistance.",
         variant: "destructive",
       });
     } finally {

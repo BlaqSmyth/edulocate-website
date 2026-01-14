@@ -22,12 +22,12 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-44">
           <div className="flex items-center">
-            <div className="flex-shrink-0 ml-8 lg:ml-16">
+            <div className="flex-shrink-0">
               <Link href="/">
                 <img 
                   src={logoImage} 
                   alt="EduLocate" 
-                  className="h-52 cursor-pointer"
+                  className="h-52 cursor-pointer -ml-4 lg:-ml-6"
                 />
               </Link>
             </div>

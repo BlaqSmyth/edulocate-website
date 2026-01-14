@@ -11,14 +11,18 @@ export default function WhatsAppChat() {
     <div className="fixed bottom-6 right-6 z-50">
       <button
         onClick={handleWhatsAppClick}
-        className="hover:scale-110 transition-all duration-300 transform group"
+        className="hover:scale-110 transition-all duration-300 transform group relative"
         aria-label="Chat on WhatsApp"
       >
         <img 
           src={whatsappLogo} 
           alt="WhatsApp" 
-          className="w-16 h-16 drop-shadow-lg"
+          className="w-16 h-16 drop-shadow-lg animate-bounce"
+          style={{ animationDuration: '2s' }}
         />
+        
+        {/* Pulse ring effect */}
+        <span className="absolute inset-0 rounded-2xl bg-green-400 animate-ping opacity-30"></span>
         
         {/* Tooltip */}
         <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">

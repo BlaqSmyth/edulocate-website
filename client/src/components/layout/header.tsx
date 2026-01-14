@@ -27,7 +27,7 @@ export default function Header() {
                 <img 
                   src={logoImage} 
                   alt="EduLocate" 
-                  className="h-12 cursor-pointer"
+                  className="h-16 cursor-pointer"
                 />
               </Link>
             </div>

@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-16 lg:pt-4 lg:pb-24">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:pr-8 mt-8 lg:mt-0">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:pr-8 lg:mx-0 lg:max-w-none mt-8 lg:mt-0">
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-6 py-3 rounded-lg mb-6 text-center">
               <div className="text-sm sm:text-lg font-bold">🎓 FREE ADMISSION PROCESSING</div>
               <div className="text-xs sm:text-sm mt-1">No Hidden Fees • No Application Charges</div>

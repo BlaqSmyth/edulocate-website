@@ -79,6 +79,7 @@ export default function ContactSection() {
       });
       
       const result = await response.json();
+      console.log("Web3Forms response:", result);
       
       if (result.success) {
         toast({
@@ -87,7 +88,8 @@ export default function ContactSection() {
         });
         form.reset();
       } else {
-        throw new Error("Form submission failed");
+        console.error("Web3Forms error:", result);
+        throw new Error(result.message || "Form submission failed");
       }
       
     } catch (error) {

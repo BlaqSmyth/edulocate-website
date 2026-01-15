@@ -60,23 +60,27 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://formspree.io/f/info@edulocate.org", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY",
           name: data.name,
           email: data.email,
           phone: data.phone || "Not provided",
           program: data.country || "Not specified",
           message: data.message || "No message provided",
-          _subject: "New Consultation Request from EduLocate Website"
+          subject: "New Consultation Request from EduLocate Website",
+          from_name: "EduLocate Website"
         })
       });
       
-      if (response.ok) {
+      const result = await response.json();
+      
+      if (result.success) {
         toast({
           title: "Message sent successfully!",
           description: "Thank you for your inquiry. Our team will contact you within 24 hours.",

@@ -60,33 +60,31 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // Create mailto link for direct email - works without any external services
-      const subject = encodeURIComponent("New Contact Form Submission - EduLocate");
-      const body = encodeURIComponent(`
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone || "Not provided"}
-Preferred Destination: ${data.country || "Not specified"}
-
-Message:
-${data.message || "No message provided"}
-
----
-This inquiry was submitted through the EduLocate website contact form.
-      `);
-      
-      const mailtoLink = `mailto:info@edulocate.org?subject=${subject}&body=${body}`;
-      
-      // Open default email client
-      window.open(mailtoLink, '_blank');
-      
-      // Show success message
-      toast({
-        title: "Email client opened!",
-        description: "Your default email app should open with a pre-filled message. Please send it to complete your inquiry, or call us directly for immediate assistance.",
+      const response = await fetch("https://formspree.io/f/info@edulocate.org", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone || "Not provided",
+          program: data.country || "Not specified",
+          message: data.message || "No message provided",
+          _subject: "New Consultation Request from EduLocate Website"
+        })
       });
       
-      form.reset();
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your inquiry. Our team will contact you within 24 hours.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
       
     } catch (error) {
       console.error("Form submission error:", error);

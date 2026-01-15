@@ -67,7 +67,7 @@ export default function ContactSection() {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY",
+          access_key: "e9504973-b476-4262-8af0-d91a976b9f95",
           name: data.name,
           email: data.email,
           phone: data.phone || "Not provided",

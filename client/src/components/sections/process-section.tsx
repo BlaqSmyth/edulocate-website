@@ -115,20 +115,18 @@ export default function ProcessSection() {
           })}
         </div>
 
-        {/* Free Service Banner */}
+        {/* Book Consultation Banner */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-8 py-4 sm:py-6 rounded-2xl inline-block shadow-lg">
-            <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
-              <div className="text-lg sm:text-2xl font-bold">🎓 100% FREE PROCESS</div>
-              <div className="text-sm sm:text-lg hidden sm:block">•</div>
-              <div className="text-sm sm:text-lg font-medium">Zero Hidden Charges</div>
-              <div className="text-sm sm:text-lg hidden sm:block">•</div>
-              <div className="text-sm sm:text-lg font-medium">Expert Guidance Included</div>
+          <Link href="/booking">
+            <div className="bg-gradient-to-r from-[var(--edu-blue)] to-blue-700 text-white px-4 sm:px-8 py-4 sm:py-6 rounded-2xl inline-block shadow-lg hover:shadow-xl cursor-pointer transition-all hover:scale-[1.02]">
+              <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
+                <div className="text-lg sm:text-2xl font-bold">📅 Book a Free 1-on-1 Consultation</div>
+              </div>
+              <div className="text-xs sm:text-sm mt-2 opacity-90">
+                Get personalized guidance from our UK education experts at no cost
+              </div>
             </div>
-            <div className="text-xs sm:text-sm mt-2 opacity-90">
-              Complete admission processing at absolutely no cost to you
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

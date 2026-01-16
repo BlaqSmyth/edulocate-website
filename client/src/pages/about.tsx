@@ -1,3 +1,6 @@
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 import AboutSection from "@/components/sections/about-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
 import ContactSection from "@/components/sections/contact-section";
@@ -22,6 +25,24 @@ export default function About() {
         
         <AboutSection />
         <TestimonialsSection />
+        
+        <section className="py-16 bg-gradient-to-r from-green-500 to-green-600">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Join 2,500+ Successful Students
+            </h2>
+            <p className="text-xl text-green-100 mb-8">
+              Start your UK education journey with a free personalized consultation
+            </p>
+            <Link href="/booking">
+              <Button size="lg" className="bg-white text-green-600 hover:bg-green-50 text-lg px-8 py-6">
+                <Calendar className="w-5 h-5 mr-2" />
+                Book a Free 1-on-1 Consultation
+              </Button>
+            </Link>
+          </div>
+        </section>
+        
         <ContactSection />
       </div>
     </>

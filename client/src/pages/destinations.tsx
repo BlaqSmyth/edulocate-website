@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import DestinationsSection from "@/components/sections/destinations-section";
 import ContactSection from "@/components/sections/contact-section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, MapPin, Star, ExternalLink, ArrowLeft } from "lucide-react";
+import { GraduationCap, MapPin, Star, ExternalLink, ArrowLeft, Calendar } from "lucide-react";
 
 const universitiesByCountry = {
   uk: {
@@ -421,14 +421,16 @@ export default function Destinations() {
                     <h3 className="text-xl sm:text-2xl font-bold mb-2">
                       {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].totalUniversities} Universities Available
                     </h3>
-                    <p className="text-blue-100 mb-4">
+                    <p className="text-blue-100 mb-6">
                       We've shown you some of the top-ranked universities in the United Kingdom. 
                       Many more excellent institutions are available for your studies.
                     </p>
-                    <div className="flex items-center justify-center space-x-2 text-blue-100">
-                      <span>Contact us to explore all your options</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </div>
+                    <Link href="/booking">
+                      <Button size="lg" className="bg-white text-[var(--edu-blue)] hover:bg-blue-50">
+                        <Calendar className="w-5 h-5 mr-2" />
+                        Book a Free 1-on-1 Consultation
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               )}

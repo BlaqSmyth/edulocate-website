@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building } from "lucide-react";
-import { useLocation } from "wouter";
+import { ArrowRight, Building, Calendar } from "lucide-react";
+import { useLocation, Link } from "wouter";
 
 const ukRegions = [
   {
@@ -100,6 +100,19 @@ export default function DestinationsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-[var(--edu-blue)] to-blue-700 text-white rounded-2xl p-8 inline-block">
+            <h3 className="text-2xl font-bold mb-2">Not Sure Which University Is Right for You?</h3>
+            <p className="text-blue-100 mb-6">Our experts will help you find the perfect match based on your goals</p>
+            <Link href="/booking">
+              <Button size="lg" className="bg-white text-[var(--edu-blue)] hover:bg-blue-50">
+                <Calendar className="w-5 h-5 mr-2" />
+                Book a Free 1-on-1 Consultation
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

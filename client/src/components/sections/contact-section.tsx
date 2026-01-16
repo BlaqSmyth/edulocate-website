@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema } from "@shared/schema";
@@ -114,7 +115,7 @@ export default function ContactSection() {
             Have Questions? Get in Touch
           </h2>
           <p className="text-lg sm:text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-            Send us a message and our team will respond within 24 hours. For immediate assistance, <strong className="text-[var(--edu-blue)]">book a free 1-on-1 consultation</strong> instead.
+            Send us a message and our team will respond within 24 hours. For immediate assistance, <Link href="/booking"><strong className="text-[var(--edu-blue)] hover:underline cursor-pointer">book a free 1-on-1 consultation</strong></Link> instead.
           </p>
         </div>
 

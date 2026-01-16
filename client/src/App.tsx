@@ -12,6 +12,11 @@ import Destinations from "@/pages/destinations.tsx";
 import About from "@/pages/about.tsx";
 import Resources from "@/pages/resources.tsx";
 import Contact from "@/pages/contact.tsx";
+import UniversityGuide from "@/pages/university-guide.tsx";
+import EssayTips from "@/pages/essay-tips.tsx";
+import TestPrep from "@/pages/test-prep.tsx";
+import Scholarships from "@/pages/scholarships.tsx";
+import Checklist from "@/pages/checklist.tsx";
 import NotFound from "@/pages/not-found.tsx";
 
 function Router() {
@@ -22,6 +27,11 @@ function Router() {
       <Route path="/destinations" component={Destinations} />
       <Route path="/about" component={About} />
       <Route path="/resources" component={Resources} />
+      <Route path="/resources/university-guide" component={UniversityGuide} />
+      <Route path="/resources/essay-tips" component={EssayTips} />
+      <Route path="/resources/test-prep" component={TestPrep} />
+      <Route path="/resources/scholarships" component={Scholarships} />
+      <Route path="/resources/checklist" component={Checklist} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

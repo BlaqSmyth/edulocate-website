@@ -8,33 +8,33 @@ const resources = [
     description: "Comprehensive guide to choosing the right university based on your academic goals and budget.",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     icon: Download,
-    action: "Download Guide",
-    url: "/contact",
+    action: "Request Guide",
+    scrollToContact: true,
   },
   {
     title: "Essay Writing Tips",
     description: "Expert tips and templates for writing compelling personal statements and application essays.",
     image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     icon: ExternalLink,
-    action: "View Tips",
-    url: "/contact",
+    action: "Get Tips",
+    scrollToContact: true,
   },
   {
     title: "Test Prep Resources",
     description: "IELTS, TOEFL, GRE, and GMAT preparation materials and practice tests to boost your scores.",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     icon: Play,
-    action: "Start Prep",
-    url: "/contact",
+    action: "Get Resources",
+    scrollToContact: true,
   },
 ];
 
 const additionalResources = [
   {
     title: "Visa Requirements",
-    description: "Detailed visa requirements and documentation checklists for different countries.",
+    description: "Detailed visa requirements and documentation checklists for UK student visas.",
     icon: ArrowRight,
-    action: "Check Requirements",
+    action: "View Requirements",
     color: "bg-blue-50 text-[var(--edu-blue)]",
     url: "/destinations",
   },
@@ -44,7 +44,7 @@ const additionalResources = [
     icon: Search,
     action: "Find Scholarships",
     color: "bg-green-50 text-[var(--edu-green)]",
-    url: "/contact",
+    scrollToContact: true,
   },
   {
     title: "Pre-Departure Checklist",
@@ -52,11 +52,18 @@ const additionalResources = [
     icon: Check,
     action: "Get Checklist",
     color: "bg-amber-50 text-[var(--edu-amber)]",
-    url: "/contact",
+    scrollToContact: true,
   },
 ];
 
 export default function ResourcesSection() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-16 lg:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,14 +90,13 @@ export default function ResourcesSection() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[var(--edu-dark)] mb-3">{resource.title}</h3>
                   <p className="text-[var(--edu-gray)] mb-4">{resource.description}</p>
-                  <Link href={resource.url}>
-                    <Button
-                      variant="link"
-                      className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
-                    >
-                      {resource.action} <IconComponent className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
+                  <Button
+                    variant="link"
+                    className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
+                    onClick={scrollToContact}
+                  >
+                    {resource.action} <IconComponent className="w-4 h-4 ml-1" />
+                  </Button>
                 </div>
               </div>
             );
@@ -107,14 +113,24 @@ export default function ResourcesSection() {
                   </div>
                   <h3 className="text-xl font-semibold text-[var(--edu-dark)] mb-3">{resource.title}</h3>
                   <p className="text-[var(--edu-gray)] mb-4">{resource.description}</p>
-                  <Link href={resource.url}>
+                  {resource.url ? (
+                    <Link href={resource.url}>
+                      <Button
+                        variant="link"
+                        className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
+                      >
+                        {resource.action} <IconComponent className="w-4 h-4 ml-1" />
+                      </Button>
+                    </Link>
+                  ) : (
                     <Button
                       variant="link"
                       className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
+                      onClick={scrollToContact}
                     >
                       {resource.action} <IconComponent className="w-4 h-4 ml-1" />
                     </Button>
-                  </Link>
+                  )}
                 </div>
               </div>
             );

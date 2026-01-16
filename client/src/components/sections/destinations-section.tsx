@@ -8,55 +8,55 @@ const ukRegions = [
     description: "Home to Oxford, Cambridge, and world-renowned institutions across historic cities.",
     universities: "130+ Universities",
     image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    slug: "uk",
+    slug: "england",
   },
   {
     name: "Scotland",
     description: "Ancient universities including Edinburgh and St Andrews with stunning campuses.",
     universities: "19 Universities",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    slug: "uk",
+    slug: "scotland",
   },
   {
     name: "Wales",
     description: "Quality education with beautiful landscapes and strong community spirit.",
     universities: "8 Universities",
     image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    slug: "uk",
+    slug: "wales",
   },
   {
     name: "Northern Ireland",
     description: "Welcoming universities with excellent student support and affordable living.",
     universities: "2 Universities",
     image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    slug: "uk",
+    slug: "northernireland",
   },
   {
     name: "London",
     description: "Global capital with Imperial, UCL, LSE and many other prestigious institutions.",
     universities: "40+ Universities",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    slug: "uk",
+    slug: "london",
   },
   {
     name: "Russell Group",
     description: "24 leading UK research universities offering world-class academic excellence.",
     universities: "24 Universities",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    slug: "uk",
+    slug: "russellgroup",
   },
 ];
 
 export default function DestinationsSection() {
   const [, navigate] = useLocation();
 
-  const handleExploreClick = (countrySlug: string) => {
-    console.log(`Navigating to: /destinations?country=${countrySlug}`);
+  const handleExploreClick = (regionSlug: string) => {
+    console.log(`Navigating to: /destinations?region=${regionSlug}`);
     // Force reload if already on destinations page
     if (window.location.pathname === '/destinations') {
-      window.location.href = `/destinations?country=${countrySlug}`;
+      window.location.href = `/destinations?region=${regionSlug}`;
     } else {
-      navigate(`/destinations?country=${countrySlug}`);
+      navigate(`/destinations?region=${regionSlug}`);
     }
   };
 

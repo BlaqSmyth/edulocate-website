@@ -7,10 +7,448 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, MapPin, Star, ExternalLink, ArrowLeft, Calendar } from "lucide-react";
 
-const universitiesByCountry = {
-  uk: {
-    name: "United Kingdom",
-    totalUniversities: "200+",
+const universitiesByRegion: Record<string, {
+  name: string;
+  totalUniversities: string;
+  universities: Array<{
+    name: string;
+    location: string;
+    ranking: string;
+    description: string;
+    courses: string[];
+    website: string;
+    image: string;
+  }>;
+}> = {
+  england: {
+    name: "England",
+    totalUniversities: "130+",
+    universities: [
+      {
+        name: "University of Cambridge",
+        location: "Cambridge",
+        ranking: "#1 Complete University Guide 2025",
+        description: "World's oldest English-speaking university with outstanding research and teaching excellence.",
+        courses: ["Mathematics", "Natural Sciences", "Economics", "Engineering", "Medicine"],
+        website: "https://www.cam.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Oxford",
+        location: "Oxford",
+        ranking: "#2 Complete University Guide 2025",
+        description: "One of the oldest and most prestigious universities in the English-speaking world.",
+        courses: ["Medicine", "Law", "Engineering", "Business", "Computer Science"],
+        website: "https://www.ox.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Warwick",
+        location: "Coventry",
+        ranking: "#6 Complete University Guide 2025",
+        description: "Dynamic research university with world-class business and economics programs.",
+        courses: ["Business", "Economics", "Engineering", "Computer Science", "Mathematics"],
+        website: "https://warwick.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Bath",
+        location: "Bath",
+        ranking: "#8 Complete University Guide 2025",
+        description: "Modern campus university with outstanding graduate employment rates.",
+        courses: ["Engineering", "Management", "Architecture", "Psychology", "Computer Science"],
+        website: "https://www.bath.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Durham University",
+        location: "Durham",
+        ranking: "#9 Complete University Guide 2025",
+        description: "Collegiate university with stunning cathedral city campus and excellent teaching.",
+        courses: ["Business", "Law", "Engineering", "Natural Sciences", "Humanities"],
+        website: "https://www.dur.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Birmingham",
+        location: "Birmingham",
+        ranking: "#12 Complete University Guide 2025",
+        description: "Leading research university and founding member of the Russell Group.",
+        courses: ["Medicine", "Engineering", "Business", "Psychology", "Law"],
+        website: "https://www.birmingham.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Lancaster University",
+        location: "Lancaster",
+        ranking: "#13 Complete University Guide 2025",
+        description: "Campus university with outstanding research and excellent student experience.",
+        courses: ["Management", "Psychology", "Engineering", "Computer Science", "Environmental Science"],
+        website: "https://www.lancaster.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Exeter",
+        location: "Exeter",
+        ranking: "#14 Complete University Guide 2025",
+        description: "Beautiful campus university with excellent teaching and research reputation.",
+        courses: ["Medicine", "Business", "Psychology", "Engineering", "Environmental Science"],
+        website: "https://www.exeter.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Bristol",
+        location: "Bristol",
+        ranking: "#16 Complete University Guide 2025",
+        description: "Leading research university known for innovation and engineering excellence.",
+        courses: ["Engineering", "Computer Science", "Medicine", "Law", "Economics"],
+        website: "https://www.bristol.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of York",
+        location: "York",
+        ranking: "#17 Complete University Guide 2025",
+        description: "Modern research university with beautiful campus and strong academic reputation.",
+        courses: ["Psychology", "Computer Science", "Economics", "Medicine", "Law"],
+        website: "https://www.york.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Sheffield",
+        location: "Sheffield",
+        ranking: "#18 Complete University Guide 2025",
+        description: "Russell Group university with outstanding engineering and medical programs.",
+        courses: ["Engineering", "Medicine", "Architecture", "Computer Science", "Psychology"],
+        website: "https://www.sheffield.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Liverpool",
+        location: "Liverpool",
+        ranking: "#19 Complete University Guide 2025",
+        description: "Historic Russell Group university with strong research and teaching traditions.",
+        courses: ["Medicine", "Veterinary Science", "Engineering", "Business", "Computer Science"],
+        website: "https://www.liverpool.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Southampton",
+        location: "Southampton",
+        ranking: "#20 Complete University Guide 2025",
+        description: "Leading research university with particular strength in engineering and computer science.",
+        courses: ["Engineering", "Computer Science", "Medicine", "Business", "Maritime Studies"],
+        website: "https://www.southampton.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Nottingham",
+        location: "Nottingham",
+        ranking: "#22 Complete University Guide 2025",
+        description: "Research-intensive university with beautiful campus and global campuses.",
+        courses: ["Medicine", "Veterinary Science", "Engineering", "Business", "Pharmacy"],
+        website: "https://www.nottingham.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Manchester",
+        location: "Manchester",
+        ranking: "#24 Complete University Guide 2025",
+        description: "Large research university with comprehensive programs and vibrant student life.",
+        courses: ["Engineering", "Computer Science", "Business", "Medicine", "Materials Science"],
+        website: "https://www.manchester.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Leeds",
+        location: "Leeds",
+        ranking: "#26 Complete University Guide 2025",
+        description: "Russell Group university offering wide range of subjects with excellent facilities.",
+        courses: ["Medicine", "Engineering", "Business", "Psychology", "Textiles"],
+        website: "https://www.leeds.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Newcastle University",
+        location: "Newcastle",
+        ranking: "#27 Complete University Guide 2025",
+        description: "Russell Group university with outstanding research and vibrant city campus.",
+        courses: ["Medicine", "Engineering", "Architecture", "Psychology", "Marine Sciences"],
+        website: "https://www.ncl.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Loughborough University",
+        location: "Loughborough",
+        ranking: "#40 Complete University Guide 2025",
+        description: "Leading university for sport and engineering with outstanding student experience.",
+        courses: ["Sport Science", "Engineering", "Business", "Design", "Computer Science"],
+        website: "https://www.lboro.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      }
+    ]
+  },
+  scotland: {
+    name: "Scotland",
+    totalUniversities: "19",
+    universities: [
+      {
+        name: "University of St Andrews",
+        location: "St Andrews",
+        ranking: "#4 Complete University Guide 2025",
+        description: "Ancient Scottish university with excellent student satisfaction and teaching quality.",
+        courses: ["International Relations", "Philosophy", "Psychology", "Computer Science", "Medicine"],
+        website: "https://www.st-andrews.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Edinburgh",
+        location: "Edinburgh",
+        ranking: "#11 Complete University Guide 2025",
+        description: "Scotland's premier university with beautiful campus and strong research programs.",
+        courses: ["Medicine", "Veterinary Science", "Engineering", "Arts", "Informatics"],
+        website: "https://www.ed.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Glasgow",
+        location: "Glasgow",
+        ranking: "#21 Complete University Guide 2025",
+        description: "Ancient Scottish university with beautiful Gothic campus and strong research tradition.",
+        courses: ["Medicine", "Engineering", "Law", "Arts", "Veterinary Medicine"],
+        website: "https://www.gla.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Aberdeen",
+        location: "Aberdeen",
+        ranking: "#35 Complete University Guide 2025",
+        description: "One of the oldest universities in the UK with strong oil and gas industry links.",
+        courses: ["Medicine", "Engineering", "Law", "Sciences", "Business"],
+        website: "https://www.abdn.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Strathclyde",
+        location: "Glasgow",
+        ranking: "#42 Complete University Guide 2025",
+        description: "Leading technological university with strong industry partnerships.",
+        courses: ["Engineering", "Business", "Science", "Pharmacy", "Law"],
+        website: "https://www.strath.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Heriot-Watt University",
+        location: "Edinburgh",
+        ranking: "#45 Complete University Guide 2025",
+        description: "International university with strengths in science, engineering and business.",
+        courses: ["Engineering", "Actuarial Science", "Business", "Computing", "Design"],
+        website: "https://www.hw.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Dundee",
+        location: "Dundee",
+        ranking: "#48 Complete University Guide 2025",
+        description: "Research-intensive university with world-leading life sciences programs.",
+        courses: ["Life Sciences", "Medicine", "Dentistry", "Art & Design", "Engineering"],
+        website: "https://www.dundee.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of Stirling",
+        location: "Stirling",
+        ranking: "#52 Complete University Guide 2025",
+        description: "Beautiful campus university known for sports and environmental sciences.",
+        courses: ["Sports Studies", "Environmental Science", "Psychology", "Business", "Nursing"],
+        website: "https://www.stir.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      }
+    ]
+  },
+  wales: {
+    name: "Wales",
+    totalUniversities: "8",
+    universities: [
+      {
+        name: "Cardiff University",
+        location: "Cardiff",
+        ranking: "#28 Complete University Guide 2025",
+        description: "Leading Welsh university with excellent research reputation and student satisfaction.",
+        courses: ["Medicine", "Journalism", "Engineering", "Psychology", "Architecture"],
+        website: "https://www.cardiff.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Swansea University",
+        location: "Swansea",
+        ranking: "#38 Complete University Guide 2025",
+        description: "Beachside campus university with strong engineering and sports science programs.",
+        courses: ["Engineering", "Medicine", "Sports Science", "Computer Science", "Business"],
+        website: "https://www.swansea.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Aberystwyth University",
+        location: "Aberystwyth",
+        ranking: "#55 Complete University Guide 2025",
+        description: "Historic seaside university with strong agricultural and environmental sciences.",
+        courses: ["Agriculture", "Geography", "Computer Science", "International Politics", "Welsh"],
+        website: "https://www.aber.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Bangor University",
+        location: "Bangor",
+        ranking: "#58 Complete University Guide 2025",
+        description: "Beautiful location in North Wales with strong marine and environmental programs.",
+        courses: ["Psychology", "Ocean Sciences", "Music", "Sports Science", "Nursing"],
+        website: "https://www.bangor.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Cardiff Metropolitan University",
+        location: "Cardiff",
+        ranking: "#75 Complete University Guide 2025",
+        description: "Modern university focused on professional and vocational education.",
+        courses: ["Sport", "Art & Design", "Education", "Health Sciences", "Business"],
+        website: "https://www.cardiffmet.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University of South Wales",
+        location: "Pontypridd",
+        ranking: "#95 Complete University Guide 2025",
+        description: "One of UK's largest universities with strong industry links and practical courses.",
+        courses: ["Nursing", "Criminology", "Engineering", "Business", "Creative Industries"],
+        website: "https://www.southwales.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      }
+    ]
+  },
+  northernireland: {
+    name: "Northern Ireland",
+    totalUniversities: "2",
+    universities: [
+      {
+        name: "Queen's University Belfast",
+        location: "Belfast",
+        ranking: "#29 Complete University Guide 2025",
+        description: "Russell Group university with strong research tradition and beautiful campus.",
+        courses: ["Medicine", "Engineering", "Law", "Psychology", "Pharmacy"],
+        website: "https://www.qub.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Ulster University",
+        location: "Belfast, Coleraine, Derry, Jordanstown",
+        ranking: "#62 Complete University Guide 2025",
+        description: "Multi-campus university with strong creative arts and business programs.",
+        courses: ["Art & Design", "Nursing", "Business", "Computer Science", "Engineering"],
+        website: "https://www.ulster.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      }
+    ]
+  },
+  london: {
+    name: "London",
+    totalUniversities: "40+",
+    universities: [
+      {
+        name: "London School of Economics",
+        location: "Central London",
+        ranking: "#3 Complete University Guide 2025",
+        description: "World-leading social science institution with exceptional research quality.",
+        courses: ["Economics", "Politics", "Sociology", "International Relations", "Management"],
+        website: "https://www.lse.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637736862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Imperial College London",
+        location: "South Kensington",
+        ranking: "#5 Complete University Guide 2025",
+        description: "Leading science, engineering, medicine and business university with exceptional graduate prospects.",
+        courses: ["Engineering", "Medicine", "Business", "Computing", "Natural Sciences"],
+        website: "https://www.imperial.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "University College London",
+        location: "Bloomsbury",
+        ranking: "#7 Complete University Guide 2025",
+        description: "Diverse and inclusive university with strength across multiple disciplines.",
+        courses: ["Medicine", "Architecture", "Psychology", "Engineering", "Law"],
+        website: "https://www.ucl.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "King's College London",
+        location: "Strand, London",
+        ranking: "#10 Complete University Guide 2025",
+        description: "Historic institution with particular strength in health sciences and humanities.",
+        courses: ["Medicine", "Law", "International Studies", "Dentistry", "War Studies"],
+        website: "https://www.kcl.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Queen Mary University of London",
+        location: "Mile End",
+        ranking: "#23 Complete University Guide 2025",
+        description: "Russell Group university with strong research reputation and diverse student body.",
+        courses: ["Medicine", "Dentistry", "Law", "Engineering", "Computer Science"],
+        website: "https://www.qmul.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "SOAS University of London",
+        location: "Bloomsbury",
+        ranking: "#33 Complete University Guide 2025",
+        description: "Specialist university focused on Asia, Africa and the Middle East.",
+        courses: ["Languages", "Development Studies", "Law", "Politics", "Economics"],
+        website: "https://www.soas.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "City, University of London",
+        location: "Islington",
+        ranking: "#44 Complete University Guide 2025",
+        description: "Business-focused university with strong journalism and law programs.",
+        courses: ["Business", "Journalism", "Law", "Health Sciences", "Computing"],
+        website: "https://www.city.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Brunel University London",
+        location: "Uxbridge",
+        ranking: "#51 Complete University Guide 2025",
+        description: "Campus university with strong engineering and design programs.",
+        courses: ["Engineering", "Design", "Business", "Sports Science", "Psychology"],
+        website: "https://www.brunel.ac.uk",
+        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Royal Holloway, University of London",
+        location: "Egham",
+        ranking: "#34 Complete University Guide 2025",
+        description: "Beautiful campus with strong arts and sciences programs.",
+        courses: ["Drama", "Psychology", "Computer Science", "Management", "Media Arts"],
+        website: "https://www.royalholloway.ac.uk",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      },
+      {
+        name: "Goldsmiths, University of London",
+        location: "New Cross",
+        ranking: "#66 Complete University Guide 2025",
+        description: "Creative university known for arts, design and social sciences.",
+        courses: ["Art", "Design", "Media", "Psychology", "Sociology"],
+        website: "https://www.gold.ac.uk",
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+      }
+    ]
+  },
+  russellgroup: {
+    name: "Russell Group",
+    totalUniversities: "24",
     universities: [
       {
         name: "University of Cambridge",
@@ -32,7 +470,7 @@ const universitiesByCountry = {
       },
       {
         name: "London School of Economics",
-        location: "London, England",
+        location: "London",
         ranking: "#3 Complete University Guide 2025",
         description: "World-leading social science institution with exceptional research quality.",
         courses: ["Economics", "Politics", "Sociology", "International Relations", "Management"],
@@ -40,64 +478,37 @@ const universitiesByCountry = {
         image: "https://images.unsplash.com/photo-1520637736862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of St Andrews",
-        location: "St Andrews, Scotland",
-        ranking: "#4 Complete University Guide 2025",
-        description: "Ancient Scottish university with excellent student satisfaction and teaching quality.",
-        courses: ["International Relations", "Philosophy", "Psychology", "Computer Science", "Medicine"],
-        website: "https://www.st-andrews.ac.uk",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
         name: "Imperial College London",
-        location: "London, England",
+        location: "London",
         ranking: "#5 Complete University Guide 2025",
-        description: "Leading science, engineering, medicine and business university with exceptional graduate prospects.",
+        description: "Leading science, engineering, medicine and business university.",
         courses: ["Engineering", "Medicine", "Business", "Computing", "Natural Sciences"],
         website: "https://www.imperial.ac.uk",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Warwick",
-        location: "Coventry, England",
-        ranking: "#6 Complete University Guide 2025",
-        description: "Dynamic research university with world-class business and economics programs.",
-        courses: ["Business", "Economics", "Engineering", "Computer Science", "Mathematics"],
-        website: "https://warwick.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
         name: "University College London",
-        location: "London, England",
+        location: "London",
         ranking: "#7 Complete University Guide 2025",
-        description: "Diverse and inclusive university with strength across multiple disciplines.",
+        description: "Diverse university with strength across multiple disciplines.",
         courses: ["Medicine", "Architecture", "Psychology", "Engineering", "Law"],
         website: "https://www.ucl.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Bath",
-        location: "Bath, England",
-        ranking: "#8 Complete University Guide 2025",
-        description: "Modern campus university with outstanding graduate employment rates.",
-        courses: ["Engineering", "Management", "Architecture", "Psychology", "Computer Science"],
-        website: "https://www.bath.ac.uk",
-        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
         name: "Durham University",
         location: "Durham, England",
         ranking: "#9 Complete University Guide 2025",
-        description: "Collegiate university with stunning cathedral city campus and excellent teaching.",
+        description: "Collegiate university with stunning cathedral city campus.",
         courses: ["Business", "Law", "Engineering", "Natural Sciences", "Humanities"],
         website: "https://www.dur.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "King's College London",
-        location: "London, England",
+        location: "London",
         ranking: "#10 Complete University Guide 2025",
-        description: "Historic institution with particular strength in health sciences and humanities.",
+        description: "Historic institution with strength in health sciences and humanities.",
         courses: ["Medicine", "Law", "International Studies", "Dentistry", "War Studies"],
         website: "https://www.kcl.ac.uk",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
@@ -106,181 +517,46 @@ const universitiesByCountry = {
         name: "University of Edinburgh",
         location: "Edinburgh, Scotland",
         ranking: "#11 Complete University Guide 2025",
-        description: "Scotland's premier university with beautiful campus and strong research programs.",
+        description: "Scotland's premier university with strong research programs.",
         courses: ["Medicine", "Veterinary Science", "Engineering", "Arts", "Informatics"],
         website: "https://www.ed.ac.uk",
-        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Birmingham",
-        location: "Birmingham, England",
-        ranking: "#12 Complete University Guide 2025",
-        description: "Leading research university and founding member of the Russell Group.",
-        courses: ["Medicine", "Engineering", "Business", "Psychology", "Law"],
-        website: "https://www.birmingham.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Lancaster University",
-        location: "Lancaster, England",
-        ranking: "#13 Complete University Guide 2025",
-        description: "Campus university with outstanding research and excellent student experience.",
-        courses: ["Management", "Psychology", "Engineering", "Computer Science", "Environmental Science"],
-        website: "https://www.lancaster.ac.uk",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Exeter",
-        location: "Exeter, England",
-        ranking: "#14 Complete University Guide 2025",
-        description: "Beautiful campus university with excellent teaching and research reputation.",
-        courses: ["Medicine", "Business", "Psychology", "Engineering", "Environmental Science"],
-        website: "https://www.exeter.ac.uk",
-        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Bristol",
-        location: "Bristol, England",
-        ranking: "#16 Complete University Guide 2025",
-        description: "Leading research university known for innovation and engineering excellence.",
-        courses: ["Engineering", "Computer Science", "Medicine", "Law", "Economics"],
-        website: "https://www.bristol.ac.uk",
-        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of York",
-        location: "York, England",
-        ranking: "#17 Complete University Guide 2025",
-        description: "Modern research university with beautiful campus and strong academic reputation.",
-        courses: ["Psychology", "Computer Science", "Economics", "Medicine", "Law"],
-        website: "https://www.york.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Sheffield",
-        location: "Sheffield, England",
-        ranking: "#18 Complete University Guide 2025",
-        description: "Russell Group university with outstanding engineering and medical programs.",
-        courses: ["Engineering", "Medicine", "Architecture", "Computer Science", "Psychology"],
-        website: "https://www.sheffield.ac.uk",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Liverpool",
-        location: "Liverpool, England",
-        ranking: "#19 Complete University Guide 2025",
-        description: "Historic Russell Group university with strong research and teaching traditions.",
-        courses: ["Medicine", "Veterinary Science", "Engineering", "Business", "Computer Science"],
-        website: "https://www.liverpool.ac.uk",
-        image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Southampton",
-        location: "Southampton, England",
-        ranking: "#20 Complete University Guide 2025",
-        description: "Leading research university with particular strength in engineering and computer science.",
-        courses: ["Engineering", "Computer Science", "Medicine", "Business", "Maritime Studies"],
-        website: "https://www.southampton.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Glasgow",
-        location: "Glasgow, Scotland",
-        ranking: "#21 Complete University Guide 2025",
-        description: "Ancient Scottish university with beautiful Gothic campus and strong research tradition.",
-        courses: ["Medicine", "Engineering", "Law", "Arts", "Veterinary Medicine"],
-        website: "https://www.gla.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Nottingham",
-        location: "Nottingham, England",
-        ranking: "#22 Complete University Guide 2025",
-        description: "Research-intensive university with beautiful campus and global campuses.",
-        courses: ["Medicine", "Veterinary Science", "Engineering", "Business", "Pharmacy"],
-        website: "https://www.nottingham.ac.uk",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Queen Mary University of London",
-        location: "London, England",
-        ranking: "#23 Complete University Guide 2025",
-        description: "Russell Group university with strong research reputation and diverse student body.",
-        courses: ["Medicine", "Dentistry", "Law", "Engineering", "Computer Science"],
-        website: "https://www.qmul.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "University of Manchester",
         location: "Manchester, England",
         ranking: "#24 Complete University Guide 2025",
-        description: "Large research university with comprehensive programs and vibrant student life.",
+        description: "Large research university with comprehensive programs.",
         courses: ["Engineering", "Computer Science", "Business", "Medicine", "Materials Science"],
         website: "https://www.manchester.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "University of Leeds",
-        location: "Leeds, England",
-        ranking: "#26 Complete University Guide 2025",
-        description: "Russell Group university offering wide range of subjects with excellent facilities.",
-        courses: ["Medicine", "Engineering", "Business", "Psychology", "Textiles"],
-        website: "https://www.leeds.ac.uk",
+        name: "University of Bristol",
+        location: "Bristol, England",
+        ranking: "#16 Complete University Guide 2025",
+        description: "Leading research university known for innovation and engineering.",
+        courses: ["Engineering", "Computer Science", "Medicine", "Law", "Economics"],
+        website: "https://www.bristol.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
-        name: "Newcastle University",
-        location: "Newcastle, England",
-        ranking: "#27 Complete University Guide 2025",
-        description: "Russell Group university with outstanding research and vibrant city campus.",
-        courses: ["Medicine", "Engineering", "Architecture", "Psychology", "Marine Sciences"],
-        website: "https://www.ncl.ac.uk",
+        name: "University of Glasgow",
+        location: "Glasgow, Scotland",
+        ranking: "#21 Complete University Guide 2025",
+        description: "Ancient Scottish university with beautiful Gothic campus.",
+        courses: ["Medicine", "Engineering", "Law", "Arts", "Veterinary Medicine"],
+        website: "https://www.gla.ac.uk",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Cardiff University",
-        location: "Cardiff, Wales",
-        ranking: "#28 Complete University Guide 2025",
-        description: "Leading Welsh university with excellent research reputation and student satisfaction.",
-        courses: ["Medicine", "Journalism", "Engineering", "Psychology", "Architecture"],
-        website: "https://www.cardiff.ac.uk",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "Queen's University Belfast",
         location: "Belfast, Northern Ireland",
         ranking: "#29 Complete University Guide 2025",
-        description: "Russell Group university with strong research tradition and beautiful campus.",
+        description: "Russell Group university with strong research tradition.",
         courses: ["Medicine", "Engineering", "Law", "Psychology", "Pharmacy"],
         website: "https://www.qub.ac.uk",
         image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "University of Sussex",
-        location: "Brighton, England",
-        ranking: "#30 Complete University Guide 2025",
-        description: "Innovative university with strong research reputation and beautiful campus near Brighton.",
-        courses: ["Psychology", "International Relations", "Computer Science", "Medicine", "Business"],
-        website: "https://www.sussex.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Coventry University",
-        location: "Coventry, West Midlands",
-        ranking: "#32 Complete University Guide 2025",
-        description: "Dynamic modern university with excellent student satisfaction and industry partnerships.",
-        courses: ["Engineering", "Business", "Design", "Health Sciences", "Computing"],
-        website: "https://www.coventry.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
-      },
-      {
-        name: "Loughborough University",
-        location: "Loughborough, Leicestershire",
-        ranking: "#40 Complete University Guide 2025",
-        description: "Leading university for sport and engineering with outstanding student experience.",
-        courses: ["Sport Science", "Engineering", "Business", "Design", "Computer Science"],
-        website: "https://www.lboro.ac.uk",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       }
     ]
   }
@@ -288,28 +564,28 @@ const universitiesByCountry = {
 
 export default function Destinations() {
   const [location] = useLocation();
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const country = urlParams.get('country');
+    const region = urlParams.get('region');
     
-    if (country && universitiesByCountry[country as keyof typeof universitiesByCountry]) {
-      setSelectedCountry(country);
+    if (region && universitiesByRegion[region]) {
+      setSelectedRegion(region);
     } else {
-      setSelectedCountry(null);
+      setSelectedRegion(null);
     }
   }, [location]);
 
   useEffect(() => {
     const handleStorageChange = () => {
       const urlParams = new URLSearchParams(window.location.search);
-      const country = urlParams.get('country');
+      const region = urlParams.get('region');
       
-      if (country && universitiesByCountry[country as keyof typeof universitiesByCountry]) {
-        setSelectedCountry(country);
+      if (region && universitiesByRegion[region]) {
+        setSelectedRegion(region);
       } else {
-        setSelectedCountry(null);
+        setSelectedRegion(null);
       }
     };
 
@@ -327,7 +603,7 @@ export default function Destinations() {
     };
   }, []);
 
-  const showingUniversities = selectedCountry && universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry];
+  const showingUniversities = selectedRegion && universitiesByRegion[selectedRegion];
 
   return (
     <>
@@ -341,18 +617,18 @@ export default function Destinations() {
               <div className="flex justify-center mb-6">
                 <Button
                   variant="ghost"
-                  onClick={() => setSelectedCountry(null)}
+                  onClick={() => setSelectedRegion(null)}
                   className="text-[var(--edu-blue)] hover:text-blue-700"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Back to UK Regions
+                  Back to All Regions
                 </Button>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[var(--edu-dark)] mb-6">
-                Top UK Universities
+                Universities in {universitiesByRegion[selectedRegion].name}
               </h1>
               <p className="text-lg sm:text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-                Explore top-ranked universities and find your perfect academic match in the United Kingdom.
+                Explore top-ranked universities in {universitiesByRegion[selectedRegion].name} and find your perfect academic match.
               </p>
             </div>
           </div>
@@ -362,7 +638,7 @@ export default function Destinations() {
           <section className="py-16 bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].universities.map((university, index) => (
+                {universitiesByRegion[selectedRegion].universities.map((university, index) => (
                   <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow" data-testid={`card-university-${index}`}>
                     <div className="relative">
                       <img
@@ -414,15 +690,15 @@ export default function Destinations() {
                 ))}
               </div>
               
-              {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].totalUniversities && (
+              {universitiesByRegion[selectedRegion].totalUniversities && (
                 <div className="mt-12">
                   <div className="bg-[var(--edu-blue)] text-white rounded-2xl p-6 sm:p-8 text-center">
                     <GraduationCap className="w-12 h-12 mx-auto mb-4 text-amber-300" />
                     <h3 className="text-xl sm:text-2xl font-bold mb-2">
-                      {universitiesByCountry[selectedCountry as keyof typeof universitiesByCountry].totalUniversities} Universities Available
+                      {universitiesByRegion[selectedRegion].totalUniversities} Universities in {universitiesByRegion[selectedRegion].name}
                     </h3>
                     <p className="text-blue-100 mb-6">
-                      We've shown you some of the top-ranked universities in the United Kingdom. 
+                      We've shown you some of the top-ranked universities in {universitiesByRegion[selectedRegion].name}. 
                       Many more excellent institutions are available for your studies.
                     </p>
                     <Link href="/booking">

@@ -85,6 +85,11 @@ export default function ContactSection() {
           description: "Thank you for your inquiry. Our team will contact you within 24 hours.",
         });
         form.reset();
+      } else if (result.message && result.message.includes("Activation")) {
+        toast({
+          title: "Almost there! Check your email",
+          description: "We sent an activation link to info@edulocate.org. Click it once to enable the form, then try again.",
+        });
       } else {
         throw new Error("Form submission failed");
       }

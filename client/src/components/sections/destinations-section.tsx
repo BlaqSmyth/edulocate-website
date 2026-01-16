@@ -79,6 +79,10 @@ export default function DestinationsSection() {
                 src={destination.image}
                 alt={`${destination.name} University Campus`}
                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600";
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-0 p-6 text-white">

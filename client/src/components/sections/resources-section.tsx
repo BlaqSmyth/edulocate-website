@@ -35,7 +35,7 @@ const additionalResources = [
     icon: ArrowRight,
     action: "View Requirements",
     color: "bg-blue-50 text-[var(--edu-blue)]",
-    url: "/destinations",
+    url: "/resources/visa-requirements",
   },
   {
     title: "Scholarship Database",

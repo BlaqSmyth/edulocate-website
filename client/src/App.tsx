@@ -17,6 +17,7 @@ import EssayTips from "@/pages/essay-tips.tsx";
 import TestPrep from "@/pages/test-prep.tsx";
 import Scholarships from "@/pages/scholarships.tsx";
 import Checklist from "@/pages/checklist.tsx";
+import VisaRequirements from "@/pages/visa-requirements.tsx";
 import NotFound from "@/pages/not-found.tsx";
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/resources/test-prep" component={TestPrep} />
       <Route path="/resources/scholarships" component={Scholarships} />
       <Route path="/resources/checklist" component={Checklist} />
+      <Route path="/resources/visa-requirements" component={VisaRequirements} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

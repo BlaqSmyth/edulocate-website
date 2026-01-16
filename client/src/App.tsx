@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import WhatsAppChat from "@/components/ui/whatsapp-chat";
+import ScrollToTop from "@/components/scroll-to-top";
 import Home from "@/pages/home.tsx";
 import Services from "@/pages/services.tsx";
 import Destinations from "@/pages/destinations.tsx";
@@ -45,6 +46,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen bg-slate-50">
+          <ScrollToTop />
           <Header />
           <main className="relative">
             <Router />

@@ -1,6 +1,4 @@
 import { Download, ExternalLink, Play, ArrowRight, Search, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 
 const resources = [
   {
@@ -81,7 +79,11 @@ export default function ResourcesSection() {
           {resources.map((resource, index) => {
             const IconComponent = resource.icon;
             return (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div 
+                key={index} 
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]"
+                onClick={scrollToContact}
+              >
                 <img
                   src={resource.image}
                   alt={resource.title}
@@ -90,13 +92,9 @@ export default function ResourcesSection() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[var(--edu-dark)] mb-3">{resource.title}</h3>
                   <p className="text-[var(--edu-gray)] mb-4">{resource.description}</p>
-                  <Button
-                    variant="link"
-                    className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
-                    onClick={scrollToContact}
-                  >
+                  <span className="text-[var(--edu-blue)] hover:text-blue-700 font-medium inline-flex items-center">
                     {resource.action} <IconComponent className="w-4 h-4 ml-1" />
-                  </Button>
+                  </span>
                 </div>
               </div>
             );
@@ -105,32 +103,24 @@ export default function ResourcesSection() {
           {/* Icon-based resources */}
           {additionalResources.map((resource, index) => {
             const IconComponent = resource.icon;
+            const handleClick = resource.url 
+              ? () => window.location.href = resource.url 
+              : scrollToContact;
             return (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div 
+                key={index} 
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all cursor-pointer hover:scale-[1.02]"
+                onClick={handleClick}
+              >
                 <div className="p-6">
                   <div className={`w-16 h-16 ${resource.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-[var(--edu-dark)] mb-3">{resource.title}</h3>
                   <p className="text-[var(--edu-gray)] mb-4">{resource.description}</p>
-                  {resource.url ? (
-                    <Link href={resource.url}>
-                      <Button
-                        variant="link"
-                        className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
-                      >
-                        {resource.action} <IconComponent className="w-4 h-4 ml-1" />
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button
-                      variant="link"
-                      className="text-[var(--edu-blue)] hover:text-blue-700 p-0"
-                      onClick={scrollToContact}
-                    >
-                      {resource.action} <IconComponent className="w-4 h-4 ml-1" />
-                    </Button>
-                  )}
+                  <span className="text-[var(--edu-blue)] hover:text-blue-700 font-medium inline-flex items-center">
+                    {resource.action} <IconComponent className="w-4 h-4 ml-1" />
+                  </span>
                 </div>
               </div>
             );

@@ -110,15 +110,11 @@ export default function ContactSection() {
     <section id="contact-section" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl mb-8 inline-block">
-            <div className="text-lg sm:text-2xl font-bold">🎓 FREE CONSULTATION & ADMISSION PROCESSING</div>
-            <div className="text-xs sm:text-sm mt-1">Zero Cost • Expert Guidance • Guaranteed Results</div>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--edu-dark)] mb-6">
-            Ready to Start Your Journey?
+            Have Questions? Get in Touch
           </h2>
           <p className="text-lg sm:text-xl text-[var(--edu-gray)] max-w-3xl mx-auto">
-            Get in touch with our expert counselors for a <strong className="text-[var(--edu-green)]">completely FREE consultation and admission processing</strong>. Take the first step towards your international education dreams at absolutely no cost.
+            Send us a message and our team will respond within 24 hours. For immediate assistance, <strong className="text-[var(--edu-blue)]">book a free 1-on-1 consultation</strong> instead.
           </p>
         </div>
 
@@ -126,9 +122,9 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="lg:col-span-8">
             <div className="bg-slate-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-[var(--edu-dark)] mb-6">Get FREE Consultation & Admission Processing</h3>
-              <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
-                <p className="text-green-800 font-medium">🎓 100% FREE admission processing - No application fees, no hidden charges!</p>
+              <h3 className="text-2xl font-semibold text-[var(--edu-dark)] mb-6">Send Us a Message</h3>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p className="text-blue-800 font-medium">📧 We'll respond to your inquiry within 24 hours</p>
               </div>
               
               <Form {...form}>

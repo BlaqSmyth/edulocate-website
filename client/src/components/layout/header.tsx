@@ -50,9 +50,9 @@ export default function Header() {
             </div>
           </div>
           <div className="hidden md:block">
-            <Link href="/contact">
+            <Link href="/booking">
               <Button className="bg-[var(--edu-blue)] text-white hover:bg-blue-700">
-                Get Free Consultation
+                Book Free Consultation
               </Button>
             </Link>
           </div>
@@ -88,12 +88,12 @@ export default function Header() {
                   </span>
                 </Link>
               ))}
-              <Link href="/contact">
+              <Link href="/booking">
                 <Button 
                   className="w-full mt-4 bg-[var(--edu-blue)] text-white hover:bg-blue-700"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Free Consultation
+                  Book Free Consultation
                 </Button>
               </Link>
             </div>

@@ -32,7 +32,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="mt-6 sm:mt-8">
-              <Link href="/contact">
+              <Link href="/booking">
                 <Button 
                   size="lg"
                   className="bg-[var(--edu-green)] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover:bg-green-700 shadow-lg w-full sm:w-auto"

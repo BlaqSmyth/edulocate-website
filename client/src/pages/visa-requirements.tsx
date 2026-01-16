@@ -283,7 +283,7 @@ export default function VisaRequirements() {
               <p className="text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
                 Our experienced team provides FREE guidance throughout the entire visa application process. We'll help you prepare documents, avoid common mistakes, and submit a strong application.
               </p>
-              <Link href="/contact">
+              <Link href="/booking">
                 <Button size="lg" className="bg-white text-[var(--edu-blue)] hover:bg-blue-50">
                   Book Free Consultation
                 </Button>

@@ -376,7 +376,7 @@ const universitiesByRegion: Record<string, {
         description: "Beachside campus university with strong engineering and sports science programs.",
         courses: ["Engineering", "Medicine", "Sports Science", "Computer Science", "Business"],
         website: "https://www.swansea.ac.uk",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
+        image: "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300"
       },
       {
         name: "Aberystwyth University",

@@ -21,7 +21,7 @@ const ukRegions = [
     name: "Wales",
     description: "Quality education with beautiful landscapes and strong community spirit.",
     universities: "8 Universities",
-    image: "https://images.unsplash.com/photo-1520637836862-4d197d17c766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     slug: "wales",
   },
   {

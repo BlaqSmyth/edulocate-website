@@ -60,36 +60,33 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // Using FormSubmit.co - works with any domain including Replit
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("phone", data.phone || "Not provided");
+      formData.append("destination", data.country || "Not specified");
+      formData.append("message", data.message || "No message provided");
+      formData.append("_subject", "New Consultation Request - EduLocate");
+      formData.append("_captcha", "false");
+      formData.append("_template", "table");
+      
+      const response = await fetch("https://formsubmit.co/ajax/info@edulocate.org", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          access_key: "e9504973-b476-4262-8af0-d91a976b9f95",
-          name: data.name,
-          email: data.email,
-          phone: data.phone || "Not provided",
-          program: data.country || "Not specified",
-          message: data.message || "No message provided",
-          subject: "New Consultation Request from EduLocate Website",
-          from_name: "EduLocate Website"
-        })
+        body: formData
       });
       
       const result = await response.json();
-      console.log("Web3Forms response:", result);
+      console.log("FormSubmit response:", result);
       
-      if (result.success) {
+      if (result.success === "true" || result.success === true) {
         toast({
           title: "Message sent successfully!",
           description: "Thank you for your inquiry. Our team will contact you within 24 hours.",
         });
         form.reset();
       } else {
-        console.error("Web3Forms error:", result);
-        throw new Error(result.message || "Form submission failed");
+        throw new Error("Form submission failed");
       }
       
     } catch (error) {
